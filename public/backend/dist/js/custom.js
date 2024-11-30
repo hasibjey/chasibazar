@@ -1,6 +1,5 @@
 $(document).ready(function() {
     $(".number").keyup(function () {
-
         const input = $(this).val();
 
         if (!isNaN(input) && $.isNumeric(input)) {
@@ -10,6 +9,4 @@ $(document).ready(function() {
             $(this).val(newInput);
         }
     });
-
-
 })

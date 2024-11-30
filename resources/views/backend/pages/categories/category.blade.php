@@ -60,12 +60,12 @@
                                             <tr>
                                                 <td class="text-capitalize">{{ $item->name }}</td>
                                                 <td class="text-center">
-                                                    <form action="{{ route('admin.category.status') }}" method="post" id="statusForm">
+                                                    <form action="{{ route('admin.category.status') }}" method="post">
                                                         @csrf
                                                         <input type="text" value="{{ $item->id }}" name="id" hidden>
                                                         <input type="text" name="status" value="{{ $item->status }}" hidden>
                                                         <div class="custom-control custom-switch">
-                                                            <input type="checkbox" class="custom-control-input" id="customSwitch1" {{ $item->status? 'checked' : null}} onchange="document.getElementById('statusForm').submit()">
+                                                            <input type="checkbox" class="custom-control-input" id="customSwitch1" {{ $item->status? 'checked' : null}} onchange="$(this).closest('form').submit()">
                                                             <label class="custom-control-label" for="customSwitch1"></label>
                                                         </div>
                                                     </form>
@@ -90,7 +90,7 @@
                                 <div class="card-header">
                                     <h3 class="card-title text-capitalize">{{ empty($update)? 'add' : 'update' }} category information</h3>
                                 </div>
-                                <form action="{{ empty($update)? route('admin.category.store') : Route('admin.category.update') }}" method="post">
+                                <form action="{{ empty($update)? route('admin.category.store') : route('admin.category.update') }}" method="post">
                                     @csrf
                                     <input type="text" name="id" value="{{ $update->id ?? null}}" hidden>
                                     <div class="card-body">

@@ -18,6 +18,7 @@ class SubCategoryController extends Controller implements HasMiddleware
     protected $path = '/images/sub-categories/';
     protected $width = 488;
     protected $height = 580;
+
     public static function middleware(): array
     {
         return [
@@ -103,13 +104,21 @@ class SubCategoryController extends Controller implements HasMiddleware
             'status' => ['required', 'numeric']
         ]);
 
-        $SubCat = SubCategory::find($request->id);
-        $imageUrl = empty($subCat)? null : $subCat->image;
+        $item = SubCategory::find($request->id);
+        $imageUrl = empty($item)? null : $item->image;
+
         if ($request->hasFile('image')) {
-            $image = $request->file('image');
-            $imageName = date('YmdHms');
-            $imageUrl = $this->path . $imageName . $this->imageExtension;
-            Backend::ImageUpload($image, $this->width, $this->height, $imageUrl);
+            if (file_exists(public_path($item->image))) {
+                unlink(public_path($item->image));
+
+                $image = $request->file('image');
+                $imageName = date('YmdHms');
+                $imageUrl = $this->path . $imageName . $this->imageExtension;
+                Backend::ImageUpload($image, $this->width, $this->height, $imageUrl);
+            } else {
+                flash()->success('Sub category image not found...!');
+                return redirect()->route('admin.category.sub.index');
+            }
         }
 
         SubCategory::find($request->id)->update([
@@ -127,7 +136,11 @@ class SubCategoryController extends Controller implements HasMiddleware
 
     public function trash($id)
     {
-        SubCategory::find($id)->delete();
+        $item = SubCategory::find($id);
+        if (file_exists(public_path($item->image)))
+            unlink(public_path($item->image));
+
+        $item->delete();
 
         flash()->success('Sub category data deleted successfully...');
         return redirect()->route('admin.category.sub.index');

@@ -11,6 +11,7 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\PageController;
 use App\Http\Controllers\Admin\Permission\PermissionController;
 use App\Http\Controllers\Admin\Permission\RoleController;
+use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\SubCategoryController;
 use Illuminate\Support\Facades\Route;
 
@@ -51,13 +52,6 @@ Route::middleware(['admin'])->prefix('admin')->name('admin.')->group(function() 
         Route::post('/update', 'update')->name('update');
         Route::get('/trash/{id}', 'trash')->name('trash');
     });
-    Route::controller(SubCategoryController::class)->prefix('categories/sub')->name('category.sub.')->group(function() {
-        Route::get('/', 'index')->name('index');
-        Route::post('/store', 'store')->name('store');
-        Route::post('/status', 'status')->name('status');
-        Route::post('/update', 'update')->name('update');
-        Route::get('/trash/{id}', 'trash')->name('trash');
-    });
     Route::controller(CategoryController::class)->prefix('setting')->name('setting.')->group(function () {
         Route::get('/navigation/create', 'create')->name('navigation.create');
         Route::post('/navigation/update', 'navigationUpdate')->name('navigation.update');
@@ -66,7 +60,6 @@ Route::middleware(['admin'])->prefix('admin')->name('admin.')->group(function() 
         Route::get('/index/create', 'indexCreate')->name('index.create');
         Route::post('/index/update', 'indexUpdate')->name('index.update');
     });
-
     Route::controller(ContactController::class)->prefix('contacts')->name('contact.')->group(function() {
         Route::get('/', 'index')->name('index');
         Route::post('/update', 'update')->name('update');
@@ -77,11 +70,27 @@ Route::middleware(['admin'])->prefix('admin')->name('admin.')->group(function() 
         Route::post('/update', 'update')->name('update');
         Route::get('/trash/{id}', 'trash')->name('trash');
     });
+    Route::controller(SubCategoryController::class)->prefix('categories/sub')->name('category.sub.')->group(function () {
+        Route::get('/', 'index')->name('index');
+        Route::post('/store', 'store')->name('store');
+        Route::post('/status', 'status')->name('status');
+        Route::post('/update', 'update')->name('update');
+        Route::get('/trash/{id}', 'trash')->name('trash');
+    });
 
     Route::controller(PageController::class)->prefix('pages')->name('page.')->group(function() {
         Route::get('/', 'index')->name('index');
         Route::get('/create', 'create')->name('create');
         Route::post('/store', 'store')->name('store');
+        Route::post('/update', 'update')->name('update');
+        Route::get('/trash/{id}', 'trash')->name('trash');
+    });
+
+
+    Route::controller(SliderController::class)->prefix('slider')->name('slider.')->group(function() {
+        Route::get('/', 'index')->name('index');
+        Route::post('/store', 'store')->name('store');
+        Route::post('/status', 'status')->name('status');
         Route::post('/update', 'update')->name('update');
         Route::get('/trash/{id}', 'trash')->name('trash');
     });

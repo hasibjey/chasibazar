@@ -86,6 +86,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <script src="{{ asset('backend/dist/js/adminlte.js') }}"></script>
     <!-- Sweet alert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Custom js -->
+    <script src="{{ asset('backend/dist/js/custom.js') }}"></script>
     <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
     <script>
         $.widget.bridge('uibutton', $.ui.button)

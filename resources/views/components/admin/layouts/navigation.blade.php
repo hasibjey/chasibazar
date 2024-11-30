@@ -47,20 +47,20 @@ $auth = Backend::GetAdmin();
                     </a>
                     <ul class="nav nav-treeview">
                         @if (Auth::guard('admin')->user()->can('categories view'))
-                            <li class="nav-item">
-                                <a href="{{ route('admin.category.index') }}" class="nav-link {{ Route::current()->getName() == 'admin.category.index' ? 'active' : '' }}">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Category</p>
-                                </a>
-                            </li>
+                        <li class="nav-item">
+                            <a href="{{ route('admin.category.index') }}" class="nav-link {{ Route::current()->getName() == 'admin.category.index' ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Category</p>
+                            </a>
+                        </li>
                         @endif
                         @if (Auth::guard('admin')->user()->can('sub-categories view'))
-                            <li class="nav-item">
-                                <a href="{{ route('admin.category.sub.index') }}" class="nav-link {{ Route::current()->getName() == 'admin.category.sub.index' ? 'active' : '' }}">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Sub Category</p>
-                                </a>
-                            </li>
+                        <li class="nav-item">
+                            <a href="{{ route('admin.category.sub.index') }}" class="nav-link {{ Route::current()->getName() == 'admin.category.sub.index' ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Sub Category</p>
+                            </a>
+                        </li>
                         @endif
                     </ul>
                 </li>
@@ -78,20 +78,20 @@ $auth = Backend::GetAdmin();
                     </a>
                     <ul class="nav nav-treeview">
                         @if (Auth::guard('admin')->user()->can('categories view'))
-                            <li class="nav-item">
-                                <a href="{{ route('admin.category.index') }}" class="nav-link {{ Route::current()->getName() == 'admin.page.index' ? 'active' : '' }}">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Category</p>
-                                </a>
-                            </li>
+                        <li class="nav-item">
+                            <a href="{{ route('admin.category.index') }}" class="nav-link {{ Route::current()->getName() == 'admin.page.index' ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Category</p>
+                            </a>
+                        </li>
                         @endif
                         @if (Auth::guard('admin')->user()->can('sub-categories view'))
-                            <li class="nav-item">
-                                <a href="{{ route('admin.category.sub.index') }}" class="nav-link {{ Route::current()->getName() == 'admin.page.create' ? 'active' : '' }}">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Sub Category</p>
-                                </a>
-                            </li>
+                        <li class="nav-item">
+                            <a href="{{ route('admin.category.sub.index') }}" class="nav-link {{ Route::current()->getName() == 'admin.page.create' ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Sub Category</p>
+                            </a>
+                        </li>
                         @endif
                     </ul>
                 </li>
@@ -124,6 +124,16 @@ $auth = Backend::GetAdmin();
                         </li>
                         @endif
                     </ul>
+                </li>
+                @endif
+                @if (Auth::guard('admin')->user()->can('slider view'))
+                <li class="nav-item">
+                    <a href="{{ route('admin.slider.index') }}" class="nav-link {{ Route::current()->getName() == 'admin.setting.index.create' ? 'active' : '' }}">
+                        <i class="nav-icon far fa-image"></i>
+                        <p>
+                            Sliders
+                        </p>
+                    </a>
                 </li>
                 @endif
                 <!-- Setting route -->
