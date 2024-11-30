@@ -61,7 +61,7 @@
                                             <tr>
                                                 <td class="text-capitalize">{{ $item->name }}</td>
                                                 <td class="text-center">
-                                                    <button class="btn btn-sm {{ empty($item->nav_status)? 'btn-danger' : 'btn-success'}}" style="width:100%">{{ empty($item->nav_status)? 'Active' : 'Deactive'}}</button>
+                                                    <button class="btn btn-sm {{ empty($item->nav_status)? 'btn-danger' : 'btn-success'}}" style="width:100%">{{ empty($item->nav_status)? 'Deactive' : 'Active'}}</button>
                                                 </td>
                                                 <td class="text-center">{{ $item->nav_position }}</td>
                                                 <td>

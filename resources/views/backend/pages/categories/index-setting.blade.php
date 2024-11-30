@@ -61,7 +61,7 @@
                                             <tr>
                                                 <td class="text-capitalize">{{ $item->name }}</td>
                                                 <td class="text-center">
-                                                    <button class="btn btn-sm {{ empty($item->index_status)? 'btn-danger' : 'btn-success'}}" style="width:100%">{{ empty($item->index_status)? 'Active' : 'Deactive'}}</button>
+                                                    <button class="btn btn-sm {{ empty($item->index_status)? 'btn-danger' : 'btn-success'}}" style="width:100%">{{ empty($item->index_status)? 'Deactive' : 'Active'}}</button>
                                                 </td>
                                                 <td class="text-center">{{ $item->index_position }}</td>
                                                 <td>
@@ -95,14 +95,14 @@
                                             @enderror
                                         </div>
                                         <div class="form-group">
-                                            <label>Navigation position</label>
+                                            <label>Index position</label>
                                             <input type="text" class="form-control" placeholder="Enter navigation position" name="position" value="{{ $update->index_position ?? old('position')}}">
                                             @error('position')
                                                 <span class="error invalid-feedback d-block">{{ $message }}</span>
                                             @enderror
                                         </div>
                                         <div class="form-group">
-                                            <label>Navigation status</label>
+                                            <label>Index status</label>
                                             <div class="row m-0">
                                                 <div class="col-6 p-0">
                                                     <div class="form-check">
