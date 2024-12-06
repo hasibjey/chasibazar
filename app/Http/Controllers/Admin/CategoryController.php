@@ -7,12 +7,16 @@ use App\Http\Controllers\Controller;
 use App\Http\Middleware\CheckAdminPermission;
 use App\Models\Category;
 use Carbon\Carbon;
+use DOMDocument;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controllers\HasMiddleware;
 use Illuminate\Routing\Controllers\Middleware;
 
 class CategoryController extends Controller implements HasMiddleware
 {
+    protected $imageExtension = '.webp';
+    protected $path = '/images/gallery/';
+
     public static function middleware(): array
     {
         return [
@@ -98,7 +102,9 @@ class CategoryController extends Controller implements HasMiddleware
 
     public function trash($id)
     {
-        Category::find($id)->delete();
+        $item = Category::find($id);
+        Backend::summernoteImageDelete($item->description);
+        $item->delete();
 
         flash()->success('Category data deleted successfully');
         return redirect()->route('admin.category.index');

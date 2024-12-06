@@ -4,6 +4,7 @@ namespace App\Helpers;
 
 use App\Models\AffiliatePayment;
 use App\Models\Order;
+use DOMDocument;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use Intervention\Image\ImageManager;
@@ -34,5 +35,18 @@ class Backend
         $img->resize($width, $height, function ($constraints) {
             $constraints->aspectRatio();
         })->toWebp(90)->save(public_path($imageUrl));
+    }
+
+    public static function summernoteImageDelete($description)
+    {
+        $dom = new DOMDocument();
+        $dom->loadHTML($description, 9);
+        $images = $dom->getElementsByTagName('img');
+        foreach ($images as $img) {
+            $imgSrc = $img->getAttribute('src');
+            if (file_exists(public_path($imgSrc))) {
+                unlink(public_path($imgSrc));
+            }
+        }
     }
 }

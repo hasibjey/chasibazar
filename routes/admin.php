@@ -6,11 +6,13 @@ use App\Http\Controllers\Admin\Auth\ProfileController;
 use App\Http\Controllers\Admin\Auth\RegisterController;
 use App\Http\Controllers\Admin\BranchController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\CommonController;
 use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\PageController;
 use App\Http\Controllers\Admin\Permission\PermissionController;
 use App\Http\Controllers\Admin\Permission\RoleController;
+use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\SubCategoryController;
 use Illuminate\Support\Facades\Route;
@@ -18,6 +20,11 @@ use Illuminate\Support\Facades\Route;
 Route::middleware(['admin'])->prefix('admin')->name('admin.')->group(function() {
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
     Route::post('/logout', [AuthenticationController::class, 'destroy'])->name('logout');
+
+    Route::controller(CommonController::class)->prefix('common')->group(function() {
+        Route::post('/summernote/image/upload', 'summernoteImageUpload')->name('summernote.image.upload');
+        Route::post('/summernote/image/delete', 'summernoteImageDelete')->name('summernote.image.delete');
+    });
 
     Route::controller(RegisterController::class)->prefix('setting/admin')->name('setting.')->group(function() {
         Route::get('/', 'create')->name('admin');
@@ -95,9 +102,21 @@ Route::middleware(['admin'])->prefix('admin')->name('admin.')->group(function() 
         Route::get('/trash/{id}', 'trash')->name('trash');
     });
 
+    Route::controller(ProductController::class)->prefix('products')->name('product.')->group(function() {
+        Route::get('/', 'index')->name('index');
+        Route::post('/store', 'store')->name('store');
+        Route::post('/status', 'status')->name('status');
+        Route::post('/update', 'update')->name('update');
+        Route::get('/trash/{id}', 'trash')->name('trash');
+    });
+
 
 });
 
+
+/**
+ * Guest route
+ */
 Route::middleware('guest:admin')->prefix('admin')->name('admin.')->group(function() {
     Route::controller(AuthenticationController::class)->group(function() {
         Route::get('login', 'create')->name('login');

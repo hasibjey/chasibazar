@@ -35,7 +35,7 @@ $auth = Backend::GetAdmin();
                     </a>
                 </li>
                 <!-- Categories route -->
-                @if (Auth::guard('admin')->user()->can('categories view') && Auth::guard('admin')->user()->can('sub-categories view'))
+                @if (Auth::guard('admin')->user()->can('categories view'))
                 <li class="nav-item {{ Str::startsWith(Route::currentRouteName(), 'admin.category.') ? 'menu-open' : '' }}">
                     <a href="#" class="nav-link {{ Str::startsWith(Route::currentRouteName(), 'admin.category.') ? 'active' : '' }}">
                         <i class="nav-icon fa fa-th" aria-hidden="true"></i>
@@ -97,7 +97,7 @@ $auth = Backend::GetAdmin();
                 </li>
                 @endif
                 <!-- Contact route -->
-                @if (Auth::guard('admin')->user()->can('contacts view') && Auth::guard('admin')->user()->can('branch view'))
+                @if (Auth::guard('admin')->user()->can('contacts view'))
                 <li class="nav-item {{ Str::startsWith(Route::currentRouteName(), 'admin.contact.') ? 'menu-open' : '' }}">
                     <a href="#" class="nav-link {{ Str::startsWith(Route::currentRouteName(), 'admin.contact.') ? 'active' : '' }}">
                         <i class="nav-icon fa fa-address-book"></i>
@@ -126,6 +126,7 @@ $auth = Backend::GetAdmin();
                     </ul>
                 </li>
                 @endif
+                <!-- Slider -->
                 @if (Auth::guard('admin')->user()->can('slider view'))
                 <li class="nav-item">
                     <a href="{{ route('admin.slider.index') }}" class="nav-link {{ Route::current()->getName() == 'admin.setting.index.create' ? 'active' : '' }}">

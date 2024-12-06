@@ -8,7 +8,7 @@ $navigations = Frontend::Navigation();
         <div class="container grid grid-cols-10 items-center py-5">
             <!-- Logo -->
             <hi class="col-span-7 lg:col-span-2 text-2xl uppercase font-bold tracking-wide flex flex-row items-end gap-1 [text-shadow:_0_2px_0_rgb(0_0_0_/_40%)]">
-                <p class="first-letter:text-4xl">Chasi</p>
+                <p class="first-letter:text-4xl">Chasir</p>
                 <p class="text-white">bazar</p>
             </hi>
             <!-- Navigation -->

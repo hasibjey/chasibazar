@@ -118,7 +118,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label>description</label>
-                                            <textarea id="summernote" name="description">{{ $update->description ?? null }}</textarea>
+                                            <textarea id="summernote" class="summernote" data-height="200" name="description">{{ $update->description ?? null }}</textarea>
                                             @error('description')
                                             <span class="error invalid-feedback d-block">{{ $message }}</span>
                                             @enderror
