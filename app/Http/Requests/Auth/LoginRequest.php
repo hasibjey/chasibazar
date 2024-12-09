@@ -29,7 +29,7 @@ class LoginRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'email' => ['required', 'string'],
+            'phone' => ['required'],
             'password' => ['required', 'string'],
         ];
     }
@@ -45,7 +45,7 @@ class LoginRequest extends FormRequest
 
         $user = User::where('type', 2)
             ->where(function ($query) {
-                $query->where('email', $this->email);
+                $query->where('phone', $this->phone);
             })
             ->first();
 

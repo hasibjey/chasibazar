@@ -1,9 +1,11 @@
-<x-frontend.auth.app>
+<x-frontend.layouts.app>
     <x-slot name="title">Login</x-slot>
 
     <main>
-        <div class="w-80 p-3 border border-gray-100 shadow-md rounded-md">
-            <h2 class="text-2xl font-bold capitalize pb-2 border-b border-gray-400 mb-2">forgot password</h2>
+        @include('components.frontend.layouts.header_2')
+
+        <div class="w-80 p-3 border border-gray-100 shadow-md rounded-md m-auto my-10">
+            <h2 class="text-xl font-bold capitalize pb-2 border-b border-gray-400 mb-2">forgot password</h2>
             <h3 class="text-xs text-justify">Lost your password? Please enter your email address. You will receive a code to create a new password via email.</h3>
 
 
@@ -11,8 +13,8 @@
                 <form action="{{ route('password.reset.store') }}" method="post">
                     @csrf
                     <div class="mb-3">
-                        <input type="email" class="w-full" name="email" placeholder="Email address">
-                        @error('email')
+                        <input type="text" class="w-full border border-primary-1 outline-none rounded-sm text-xs py-2 px-2 focus:border-primary" name="phone" placeholder="Enter phone number">
+                        @error('phone')
                             <span class="text-red-500 text-sm">{{ $message }}</span>
                         @enderror
                     </div>
@@ -23,4 +25,4 @@
             </div>
         </div>
     </main>
-</x-frontend.auth.app>
+</x-frontend.layouts.app>

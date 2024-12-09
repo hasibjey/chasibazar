@@ -1,4 +1,4 @@
-<x-frontend.auth.app>
+<x-frontend.layouts.app>
     <x-slot name="title">Login</x-slot>
 
     <main>
@@ -8,7 +8,7 @@
                 <form action="{{ route('password.account.verification') }}" method="post">
                     @csrf
                     <div class="mb-3">
-                        <input type="email" class="w-full" name="email" value="{{ $email }}" readonly>
+                        <input type="text" class="w-full border border-primary-1 outline-none rounded-sm text-xs py-2 px-2 focus:border-primary" name="phone" value="{{ $phone }}" readonly>
                         @error('email')
                         <span class="text-red-500 text-sm">{{ $message }}</span>
                         @enderror
@@ -55,4 +55,4 @@
 
         </script>
     </x-slot>
-</x-frontend.auth.app>
+</x-frontend.layouts.app>

@@ -22,17 +22,17 @@ class ValidationController extends Controller
 
     public function store(Request $request)
     {
-        Frontend::OTPGenerator($request->email);
+        Frontend::OTPGenerator($request->phone);
 
-        $token = Crypt::encrypt($request->email);
+        $token = Crypt::encrypt($request->phone);
 
         return redirect()->route('validation', [$token]);
     }
 
     public function validation($token)
     {
-        $email = Crypt::decrypt($token);
-        return view('frontend.auth.verification', compact('email'));
+        $phone = Crypt::decrypt($token);
+        return view('frontend.auth.verification', compact('phone'));
     }
 
     public function check(Request $request)
@@ -43,9 +43,9 @@ class ValidationController extends Controller
 
         $code = $request->code[0]. $request->code[1]. $request->code[2]. $request->code[3];
 
-        if(!empty(otp::where('title', Auth::guard('web')->user()->email)->where('code', $code)->first()))
+        if(!empty(otp::where('title', Auth::guard('web')->user()->phone)->where('code', $code)->first()))
         {
-            Otp::where('title', Auth::guard('web')->user()->email)->delete();
+            Otp::where('title', Auth::guard('web')->user()->phone)->delete();
             User::find(Auth::guard('web')->user()->id)->update([
                 'email_verified_at' => Carbon::now()
             ]);

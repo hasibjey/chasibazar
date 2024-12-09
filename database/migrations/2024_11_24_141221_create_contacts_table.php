@@ -17,14 +17,13 @@ return new class extends Migration
             $table->id();
             $table->string('email')->nullable();
             $table->string('phone')->nullable();
-            $table->string('alterPhone')->nullable();
             $table->string('whatsapp')->nullable();
             $table->string('calling_hours')->nullable();
             $table->timestamps();
         });
 
         Contact::insert([
-            'email' => 'info@krishibazar.com',
+            'email' => 'info@cashirbazar.com',
             'created_at' => Carbon::now()
         ]);
     }

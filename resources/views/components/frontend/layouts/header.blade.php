@@ -4,80 +4,40 @@ $navigations = Frontend::Navigation();
 
 <section class="relative">
     <!-- Header section -->
-    <header class="absolute top-0 left-1/2 -translate-x-1/2 w-full bg-gradient-to-b from-black/70 z-50">
+    <header class=" absolute bg-gradient-to-b from-black/70 top-0 left-1/2 -translate-x-1/2 w-full z-50">
+        <div class="bg-white">
+            <div class="container">
+                <div class="grid grid-cols-2 py-1 text-sm">
+                    <ul class="flex flex-row justify-start items-center">
+                        <li class="flex flex-row items-center gap-2">
+                            <span class="text-base"><i class="ri-customer-service-2-fill"></i></span>
+                            <a href="tel:01945907007" class="transition-all duration-300 hover:text-primary">01945907007</a>
+                        </li>
+                    </ul>
+                    <ul class="flex flex-row justify-end items-center">
+                        <li class="flex flex-row items-center gap-2">
+                            <span class="text-base"><i class="ri-user-3-fill"></i></span>
+                            @guest
+                                <a href="{{ route('login') }}" class="transition-all duration-300 font-semibold capitalize hover:text-primary">login</a>
+                            @endguest
+                            @auth('web')
+                                <a href="{{ route('user.dashboard') }}" class="transition-all duration-300 font-semibold capitalize hover:text-primary">{{ Auth::user()->name }}</a>
+                            @endauth
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
         <div class="container grid grid-cols-10 items-center py-5">
             <!-- Logo -->
-            <hi class="col-span-7 lg:col-span-2 text-2xl uppercase font-bold tracking-wide flex flex-row items-end gap-1 [text-shadow:_0_2px_0_rgb(0_0_0_/_40%)]">
-                <p class="first-letter:text-4xl">Chasir</p>
-                <p class="text-white">bazar</p>
-            </hi>
+            <a href="{{ route('home') }}" class="block col-span-7 lg:col-span-2">
+                <h1 class="text-2xl uppercase font-bold tracking-wide flex flex-row items-end gap-1 [text-shadow:_0_2px_0_rgb(0_0_0_/_40%)]">
+                    <p class="first-letter:text-4xl">Chasir</p>
+                    <p class="text-white">bazar</p>
+                </h1>
+            </a>
             <!-- Navigation -->
-            <div class="col-span-7 text-white hidden lg:block">
-                <ul class="flex flex-row justify-start items-center gap-5">
-                    <li class="relative">
-                        <a href="{{ route('home') }}" class="block cursor-pointer py-1 px-3 capitalize before:absolute before:bottom-0 before:left-0 before:content[''] before:w-0 before:py-px before:bg-gradient-to-r before:from-primary-1 before:transition-all before:duration-500 before:hover:w-full">home</a>
-                    </li>
-                    @foreach ($navigations as $navigation)
-                    @if(count($navigation->SubCategories)>0)
-                    <li class="relative group">
-                        <h2 class="block cursor-pointer py-4 px-3 capitalize">{{$navigation->name}}</h2>
-                        <ul class="absolute top-full left-0 w-60 max-w-80 rounded-md bg-white shadow-sm border border-gray-100/60 rotate-x-90 origin-top transition-all duration-300 group-hover:rotate-x-0 z-50">
-                            @foreach ($navigation->SubCategories as $subNav)
-                                <li class="border-b border-primary-1/20 last:border-0 transition-all duration-300 hover:bg-primary/10 first:rounded-tl-md first:rounded-tr-md last:rounded-bl-md last:rounded-br-md">
-                                    <a href="{{ $subNav->slug }}" class="block py-3 px-6 text-15 capitalize text-secondary">{{ $subNav->name }}</a>
-                                </li>
-                            @endforeach
-                        </ul>
-                    </li>
-                    @else
-                    <li class="relative">
-                        <a href="{{ $navigation->slug }}" class="block cursor-pointer py-1 px-3 capitalize before:absolute before:bottom-0 before:left-0 before:content[''] before:w-0 before:py-px before:bg-gradient-to-r before:from-primary-1 before:transition-all before:duration-500 before:hover:w-full">{{ $navigation->name }}</a>
-                    </li>
-                    @endif
-                    @endforeach
-                    {{-- <li class="relative">
-                        <a href="" class="block cursor-pointer py-1 px-3 capitalize before:absolute before:bottom-0 before:left-0 before:content[''] before:w-0 before:py-px before:bg-gradient-to-r before:from-primary-1 before:transition-all before:duration-500 before:hover:w-full">about</a>
-                    </li>
-                    <li class="relative">
-                        <a href="" class="block cursor-pointer py-1 px-3 capitalize before:absolute before:bottom-0 before:left-0 before:content[''] before:w-0 before:py-px before:bg-gradient-to-r before:from-primary-1 before:transition-all before:duration-500 before:hover:w-full">team</a>
-                    </li>
-                    <li class="relative group">
-                        <h2 class="block cursor-pointer py-4 px-3 capitalize">solution</h2>
-                        <ul class="absolute top-full left-0 w-60 max-w-80 rounded-md bg-white shadow-sm border border-gray-100/60 rotate-x-90 origin-top transition-all duration-300 group-hover:rotate-x-0 z-50">
-                            <li class="border-b border-primary-1/20 last:border-0 transition-all duration-300 hover:bg-primary/10 first:rounded-tl-md first:rounded-tr-md last:rounded-bl-md last:rounded-br-md">
-                                <a href="" class="block py-3 px-6 text-15 capitalize text-secondary">for
-                                    farmers</a>
-                            </li>
-                            <li class="border-b border-primary-1/20 last:border-0 transition-all duration-300 hover:bg-primary/10 first:rounded-tl-md first:rounded-tr-md last:rounded-bl-md last:rounded-br-md">
-                                <a href="" class="block py-3 px-6 text-15 capitalize text-secondary">for
-                                    founder</a>
-                            </li>
-                            <li class="border-b border-primary-1/20 last:border-0 transition-all duration-300 hover:bg-primary/10 first:rounded-tl-md first:rounded-tr-md last:rounded-bl-md last:rounded-br-md">
-                                <a href="" class="block py-3 px-6 text-15 capitalize text-secondary">sofol</a>
-                            </li>
-                            <li class="border-b border-primary-1/20 last:border-0 transition-all duration-300 hover:bg-primary/10 first:rounded-tl-md first:rounded-tr-md last:rounded-bl-md last:rounded-br-md">
-                                <a href="" class="block py-3 px-6 text-15 capitalize text-secondary">agri-input</a>
-                            </li>
-                            <li class="border-b border-primary-1/20 last:border-0 transition-all duration-300 hover:bg-primary/10 first:rounded-tl-md first:rounded-tr-md last:rounded-bl-md last:rounded-br-md">
-                                <a href="" class="block py-3 px-6 text-15 capitalize text-secondary">IOT &
-                                    precision farming</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="relative">
-                        <a href="" class="block cursor-pointer py-1 px-3 capitalize before:absolute before:bottom-0 before:left-0 before:content[''] before:w-0 before:py-px before:bg-gradient-to-r before:from-primary-1 before:transition-all before:duration-500 before:hover:w-full">report</a>
-                    </li>
-                    <li class="relative">
-                        <a href="" class="block cursor-pointer py-1 px-3 capitalize before:absolute before:bottom-0 before:left-0 before:content[''] before:w-0 before:py-px before:bg-gradient-to-r before:from-primary-1 before:transition-all before:duration-500 before:hover:w-full">impact</a>
-                    </li>
-                    <li class="relative">
-                        <a href="" class="block cursor-pointer py-1 px-3 capitalize before:absolute before:bottom-0 before:left-0 before:content[''] before:w-0 before:py-px before:bg-gradient-to-r before:from-primary-1 before:transition-all before:duration-500 before:hover:w-full">blog</a>
-                    </li>
-                    <li class="relative">
-                        <a href="" class="block cursor-pointer py-1 px-3 capitalize before:absolute before:bottom-0 before:left-0 before:content[''] before:w-0 before:py-px before:bg-gradient-to-r before:from-primary-1 before:transition-all before:duration-500 before:hover:w-full">carer</a>
-                    </li> --}}
-                </ul>
-            </div>
+            @include('components.frontend.layouts.navigation')
 
             <!-- Language button -->
             <div class="flex flex-row gap-2 justify-end col-span-3 lg:col-span-1">
@@ -113,7 +73,7 @@ $navigations = Frontend::Navigation();
     </section>
 
     <!-- Counter -->
-    <section class="absolute bottom-0 left-0 w-full z-50">
+    <section class="absolute bottom-0 left-0 w-full z-40">
         <div class="grid grid-cols-2 lg:grid-cols-4 text-white items-center border-b-[20px] border-primary counters">
             <div class="flex justify-center py-5 lg:py-10 border border-white border-b-0 border-r-0 border-l-0 counters">
                 <div class="">

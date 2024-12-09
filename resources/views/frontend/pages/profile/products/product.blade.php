@@ -45,7 +45,7 @@
                                         </form>
                                     </div>
                                     <div class="col-lg-1">
-                                        <a href="{{ route('admin.product.create') }}" class="btn btn-sm btn-info w-full">Add</a>
+                                        <a href="{{ route('user.product.create') }}" class="btn btn-sm btn-info w-full">Add</a>
                                     </div>
                                 </div>
                                 <!-- /.card-header -->
@@ -68,7 +68,7 @@
                                                 <td class="text-capitalize">{{ $item->Category->name }}</td>
                                                 <td class="text-capitalize">{{ $item->SubCategory->name }}</td>
                                                 <td class="text-center">
-                                                    <form action="{{ route('admin.category.status') }}" method="post">
+                                                    <form action="{{ route('user.product.status') }}" method="post">
                                                         @csrf
                                                         <input type="text" value="{{ $item->id }}" name="id" hidden>
                                                         <input type="text" name="status" value="{{ $item->status }}" hidden>
@@ -80,7 +80,7 @@
                                                 </td>
                                                 <td>
                                                     <button class="btn btn-xs btn-outline-danger" onclick="deleteItem({{ $item->id }})"><i class="fas fa-trash-alt"></i></button>
-                                                    <a href="?eid={{ $item->id }}" class="btn btn-xs btn-outline-info"><i class="fas fa-edit"></i></a>
+                                                    <a href="{{ route('user.product.edit', [$item->id]) }}" class="btn btn-xs btn-outline-info"><i class="fas fa-edit"></i></a>
                                                 </td>
                                             </tr>
                                             @endforeach
@@ -113,7 +113,7 @@
                     , confirmButtonText: "Yes, delete it!"
                 }).then((result) => {
                     if (result.isConfirmed) {
-                        window.location.replace("{{ route('admin.category.trash', ['__id__']) }}".replace('__id__', id));
+                        window.location.replace("{{ route('user.product.trash', ['__id__']) }}".replace('__id__', id));
                         Swal.fire({
                             title: "Deleted!"
                             , text: "Your file has been deleted."

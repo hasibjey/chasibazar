@@ -22,7 +22,7 @@ class RegisterController extends Controller
     {
         $request->validate([
             'name' => ['required', 'string'],
-            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', Rule::unique('users')->where(function ($query) use ($request) {
+            'phone' => ['required', 'max:255', Rule::unique('users')->where(function ($query) use ($request) {
                 return $query->where('role', 2);
             })],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
@@ -30,7 +30,6 @@ class RegisterController extends Controller
 
         $user = User::create([
             'name' => $request->name,
-            'email' => $request->email,
             'phone' => $request->phone,
             'type' => 2,
             'password' => Hash::make($request->password),

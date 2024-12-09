@@ -21,22 +21,13 @@
                     </a>
                 </li>
                 <li class="flex flex-col gap-1 py-3">
-                    <p class="">Krishi bazar Helpline</p>
-                    <a href="" class="flex flex-row justify-start items-center gap-3 font-semibold">
-                        <span>
-                            <i class="ri-phone-line text-xl font-extralight"></i>
-                        </span>
-                        <span>{{ $contact->phone }}</span>
-                    </a>
-                </li>
-                <li class="flex flex-col gap-1 py-3">
                     <p class="">Calling Hours</p>
                     <p class="flex flex-row justify-start items-center gap-3 font-semibold">
                         {{ $contact->calling_hours }}
                     </p>
                 </li>
                 <li class="flex flex-col gap-1 py-3">
-                    <p class="">Krishi bazar Helpline</p>
+                    <p class="">Chasir bazar Helpline</p>
                     <a href="" class="flex flex-row justify-start items-center gap-3 font-semibold">
                         <span>
                             <i class="ri-phone-line text-xl font-light"></i>
@@ -205,7 +196,7 @@
 
     <!-- Copy right & social media -->
     <div class="grid grid-cols-2 pt-5 border-t border-primary-1/30">
-        <div class="text-xs">&COPY; 2024 Krishi Bazar</div>
+        <div class="text-xs">&COPY; 2024 Chasir Bazar</div>
         <div class="flex justify-end items-center">
             <ul class="flex flex-row items-center gap-2 text-primary">
                 <li>

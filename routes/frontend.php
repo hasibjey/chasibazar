@@ -5,7 +5,9 @@ use App\Http\Controllers\Frontend\Auth\PasswordResetController;
 use App\Http\Controllers\Frontend\Auth\RegisterController;
 use App\Http\Controllers\Frontend\Auth\ValidationController;
 use App\Http\Controllers\Frontend\HomeController;
+use App\Http\Controllers\Frontend\ProductController;
 use App\Http\Controllers\Frontend\profile\DashboardController;
+use App\Http\Controllers\Frontend\profile\ProductController as ProfileProductController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -14,9 +16,25 @@ Route::controller(HomeController::class)->group(function() {
 });
 
 
+
+
 Route::middleware(['web', 'uv'])->group(function() {
-    Route::get('dashboard', [DashboardController::class, 'index'])->name('user.dashboard');
     Route::post('logout', [AuthenticationController::class, 'destroy'])->name('logout');
+
+    Route::prefix('user')->name('user.')->group(function() {
+        Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+        Route::controller(ProfileProductController::class)->prefix('product')->name('product.')->group(function() {
+            Route::get('/', 'index')->name('index');
+            Route::get('/create', 'create')->name('create');
+            Route::post('/store', 'store')->name('store');
+            Route::get('/edit/{id}', 'edit')->name('edit');
+            Route::post('/status', 'status')->name('status');
+            Route::post('/update', 'update')->name('update');
+            Route::get('/image/trash/{id}', 'imageTrash')->name('image.trash');
+            Route::get('/trash/{id}', 'trash')->name('trash');
+        });
+
+    });
 });
 
 Route::middleware(['web', 'unv'])->group(function() {
@@ -50,4 +68,11 @@ Route::middleware('guest:web')->group(function() {
         Route::post('new-password', 'changePassword')->name('new.password.store');
     });
 
+});
+
+
+
+Route::controller(ProductController::class)->group(function () {
+    Route::get('/products/{slug}', 'products')->name('products');
+    Route::get('{slug}/{code}', 'product')->name('product');
 });

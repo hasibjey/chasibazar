@@ -33,6 +33,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <link rel="stylesheet" href="{{ asset('backend/plugins/daterangepicker/daterangepicker.css') }}">
     <!-- summernote -->
     <link rel="stylesheet" href="{{ asset('backend/plugins/summernote/summernote-bs4.min.css') }}">
+    <!-- Custom css -->
+    <link rel="stylesheet" href="{{ asset('backend/dist/css/custom.css') }}">
 
     {{ $css ?? null }}
 
@@ -94,6 +96,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <script src="{{ asset('backend/dist/js/custom.js') }}"></script>
     <!-- Axios -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="{{ asset('backend/dist/js/spartan-multi-image-picker-min.js') }}"></script>
     <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
     <script>
         $.widget.bridge('uibutton', $.ui.button)

@@ -104,6 +104,7 @@ Route::middleware(['admin'])->prefix('admin')->name('admin.')->group(function() 
 
     Route::controller(ProductController::class)->prefix('products')->name('product.')->group(function() {
         Route::get('/', 'index')->name('index');
+        Route::get('/create', 'create')->name('create');
         Route::post('/store', 'store')->name('store');
         Route::post('/status', 'status')->name('status');
         Route::post('/update', 'update')->name('update');
