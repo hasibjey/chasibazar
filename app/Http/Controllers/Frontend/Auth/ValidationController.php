@@ -17,7 +17,10 @@ class ValidationController extends Controller
 {
     public function index()
     {
-        return view('frontend.auth.verified');
+        if(Auth::check())
+            return view('frontend.auth.verified');
+        else
+            return redirect()->route('login');
     }
 
     public function store(Request $request)

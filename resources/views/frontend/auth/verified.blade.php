@@ -13,8 +13,8 @@
                 <form action="{{ route('verify.otp.store') }}" method="post">
                     @csrf
                     <div class="mb-3">
-                        <input type="text" class="w-full border border-primary-1 outline-none rounded-sm text-xs py-2 px-2 focus:border-primary" name="phone" value="{{ Auth::guard('web')->user()->phone }}" readonly>
-                        @error('email')
+                        <input type="text" class="w-full border border-primary-1 outline-none rounded-sm text-xs py-2 px-2 focus:border-primary" name="phone" value="{{ Auth::guard('web')->user()->phone ?? null }}" readonly>
+                        @error('phone')
                             <span class="text-red-500 text-sm">{{ $message }}</span>
                         @enderror
                     </div>

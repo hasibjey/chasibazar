@@ -19,7 +19,7 @@ class ProductController extends Controller
     public function products($slug)
     {
         $category = SubCategory::where('slug', $slug)->first();
-        $products = Product::where('sub_category_id', $category->id)->get();
+        $products = Product::where('sub_category_id', $category->id)->where('status', 1)->get();
         return view('frontend.pages.products', compact('products'));
     }
 
