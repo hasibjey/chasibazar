@@ -18,40 +18,43 @@
                         </div>
                         <div class="">
                             <h3 class="text-lg font-semibold capitalize">farmer information:</h3>
-                            <ul class="flex flex-col gap-1 text-sm mt-3">
-                                <li>
-                                    <span class="text-base">
-                                        <i class="ri-user-fill"></i>
-                                    </span>
-                                    <span class="text-gray-500">{{ $product->User->name }}</span>
-                                </li>
-                                <li>
-                                    <span class="text-base">
-                                        <i class="ri-phone-fill"></i>
-                                    </span>
-                                    <span class="text-gray-500">{{ $product->User->phone }}</span>
-                                </li>
-                                <li>
-                                    <span class="text-base">
-                                        <i class="ri-map-pin-user-fill"></i>
-                                    </span>
-                                    <span class="text-gray-500">House#09, Road#03, Borobag, Bosoti Housing, Mirpur-2</span>
-                                </li>
-                                <li>
-                                    <ul class="flex flex-row gap-2 py-2">
-                                        <li>
-                                            <a href="" class="text-base flex flex-row items-center justify-center w-7 h-7 bg-primary-1 text-white rounded-full transition-all duration-300 hover:animate-zoom hover:bg-primary"><i class="ri-customer-service-2-fill"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="" class="text-base flex flex-row items-center justify-center w-7 h-7 bg-primary-1 text-white rounded-full transition-all duration-300 hover:animate-zoom hover:bg-primary"><i class="ri-video-chat-line"></i></a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            {{-- <p class="mt-3">
-                                After logging in, the farmer will be able to see the information.
-                                <a href="" class="text-primary-1 transition-all duration-300 hover:text-primary italic">Login here</a>
-                            </p> --}}
+                            @auth('customer')
+                                <ul class="flex flex-col gap-1 text-sm mt-3">
+                                    <li>
+                                        <span class="text-base">
+                                            <i class="ri-user-fill"></i>
+                                        </span>
+                                        <span class="text-gray-500">{{ $product->User->name }}</span>
+                                    </li>
+                                    <li>
+                                        <span class="text-base">
+                                            <i class="ri-phone-fill"></i>
+                                        </span>
+                                        <span class="text-gray-500">{{ $product->User->phone }}</span>
+                                    </li>
+                                    <li>
+                                        <span class="text-base">
+                                            <i class="ri-map-pin-user-fill"></i>
+                                        </span>
+                                        <span class="text-gray-500">House#09, Road#03, Borobag, Bosoti Housing, Mirpur-2</span>
+                                    </li>
+                                    <li>
+                                        <ul class="flex flex-row gap-2 py-2">
+                                            <li>
+                                                <a href="" class="text-base flex flex-row items-center justify-center w-7 h-7 bg-primary-1 text-white rounded-full transition-all duration-300 hover:animate-zoom hover:bg-primary"><i class="ri-customer-service-2-fill"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="" class="text-base flex flex-row items-center justify-center w-7 h-7 bg-primary-1 text-white rounded-full transition-all duration-300 hover:animate-zoom hover:bg-primary"><i class="ri-video-chat-line"></i></a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            @endauth
+                            @guest('customer')
+                                <p class="mt-3 text-red-500">
+                                    If you are a customer, please <a href="{{ route('customer.register.index') }}" class="text-primary-1 transition-all duration-300 hover:text-primary italic">Register</a> or <a href="{{ route('customer.login') }}" class="text-primary-1 transition-all duration-300 hover:text-primary italic">Login</a> to your account to view the farmer information.
+                                </p>
+                            @endguest
                         </div>
 
                         @if(count($product->Images)>0)

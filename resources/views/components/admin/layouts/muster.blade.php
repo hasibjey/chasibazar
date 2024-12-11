@@ -56,10 +56,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
         <!-- Main Footer -->
         <x-admin.layouts.footer />
-
-        <form action="{{ route('admin.logout') }}" method="post" class="admin-logout">
-            @csrf
-        </form>
     </div>
 
     <!-- jQuery -->

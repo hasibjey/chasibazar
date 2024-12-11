@@ -21,6 +21,9 @@ class RedirectIfAuthenticated
             if ($guard == 'admin' && Auth::guard($guard)->check()) {
                 return redirect()->route('admin.dashboard');
             }
+            if ($guard == 'customer' && Auth::guard($guard)->check()) {
+                return redirect()->route('customer.dashboard');
+            }
             if ($guard == 'web' && Auth::guard($guard)->check()) {
                 return redirect()->route('user.dashboard');
             }

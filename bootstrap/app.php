@@ -19,6 +19,7 @@ return Application::configure(basePath: dirname(__DIR__))
 
             // Authentication middleware
             'admin' => \App\Http\Middleware\AdminMiddleware::class,
+            'customer' => \App\Http\Middleware\CustomerMiddleware::class,
             'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
             'uv' => \App\Http\Middleware\UserVerified::class,
             'unv' => \App\Http\Middleware\UserNotVerified::class,

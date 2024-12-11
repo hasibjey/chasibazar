@@ -15,10 +15,24 @@ $navigations = Frontend::Navigation();
                                 class="transition-all duration-300 hover:text-primary">01945907007</a>
                         </li>
                     </ul>
-                    <ul class="flex flex-row justify-end items-center">
-                        <li class="flex flex-row items-center gap-2">
+                    <ul class="flex flex-row justify-end items-center gap-5">
+                        <li class="flex flex-row items-center gap-1">
                             <span class="text-base"><i class="ri-user-3-fill"></i></span>
-                            <a href="{{ route('login') }}" class="transition-all duration-300 font-semibold capitalize hover:text-primary">login</a>
+                            @guest
+                                <a href="{{ route('login') }}" class="transition-all duration-300 font-semibold capitalize hover:text-primary">Farmer login</a>
+                            @endguest
+                            @auth('web')
+                                <a href="{{ route('user.dashboard') }}" class="transition-all duration-300 font-semibold capitalize hover:text-primary">{{ Auth::user()->name }}</a>
+                            @endauth
+                        </li>
+                        <li class="flex flex-row items-center gap-1">
+                            <span class="text-base"><i class="ri-user-3-fill"></i></span>
+                            @guest('customer')
+                                <a href="{{ route('customer.login') }}" class="transition-all duration-300 font-semibold capitalize hover:text-primary">Customer login</a>
+                            @endguest
+                            @auth('customer')
+                                <a href="{{ route('customer.dashboard') }}" class="transition-all duration-300 font-semibold capitalize hover:text-primary">{{ Auth::guard('customer')->user()->name }}</a>
+                            @endauth
                         </li>
                     </ul>
                 </div>
