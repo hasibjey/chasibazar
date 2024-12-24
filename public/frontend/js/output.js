@@ -59,4 +59,3 @@ document.querySelectorAll(".counter").forEach((element) => {
   }, 10);
 });
 
-

@@ -19,5 +19,22 @@
     .rotate-x-180 {
         transform: rotateX(180deg);
     }
+    .h-main-cart {
+        height: calc(100vh - 200px);
+    }
+    .h-cart-item {
+        height: calc(100vh - 350px);
+    }
+    .cart-table > thead > tr > th,
+    .cart-table > tbody > tr > td,
+    .cart-table > tfoot > tr > td {
+        @apply border-l border-t last:border-r py-1 px-2;
+    }
+    .cart-table > thead > tr > th {
+        @apply py-2;
+    }
+    .cart-table > tfoot > tr:last-child > td {
+        @apply border-b;
+    }
 }
 

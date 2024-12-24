@@ -23,9 +23,11 @@ class ProductController extends Controller
 
     public function index(Request $request)
     {
+        // return Auth::guard('web')->user()->id;
         $paginate = isset($request->paginate) ? $request->paginate : 20;
 
         $items = Product::with(['Category:id,name', 'SubCategory:id,name'])
+        ->where('user_id', Auth::user()->id)
         ->select('id', 'category_id', 'sub_category_id', 'user_id', 'title', 'quantity', 'price', 'status')
         ->orderBy('created_at', 'DESC');
         $items = $items->paginate($paginate);

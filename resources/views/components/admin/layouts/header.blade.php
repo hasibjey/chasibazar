@@ -23,9 +23,21 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link text-danger" data-widget="control-sidebar" data-slide="true" href="#" role="button" onclick="$('.admin-logout').submit()">
-                <i class="fas fa-power-off"></i>
-            </a>
+            @auth('admin')
+                <a class="nav-link text-danger" data-widget="control-sidebar" data-slide="true" href="#" role="button" onclick="$('.admin-logout').submit()">
+                    <i class="fas fa-power-off"></i>
+                </a>
+            @endauth
+            @auth('customer')
+                <a class="nav-link text-danger" data-widget="control-sidebar" data-slide="true" href="#" role="button" onclick="$('.customer-logout').submit()">
+                    <i class="fas fa-power-off"></i>
+                </a>
+            @endauth
+            @auth('web')
+                <a class="nav-link text-danger" data-widget="control-sidebar" data-slide="true" href="#" role="button" onclick="$('#logout').submit()">
+                    <i class="fas fa-power-off"></i>
+                </a>
+            @endauth
         </li>
     </ul>
 </nav>

@@ -20,7 +20,7 @@
 
     <!-- Styles / Scripts -->
     @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
     @endif
 
     <!-- Style sheet -->
@@ -50,10 +50,29 @@
     <script src="{{ asset('frontend/plugin/select2.min.js') }}"></script>
     <!-- counter animation -->
     <script src="{{ asset('frontend/js/counter-animation.js') }}"></script>
+    <!-- Sweet alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Internal js -->
+    <script>
+        const Toast = Swal.mixin({
+            toast: true,
+            position: "top-end",
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.onmouseenter = Swal.stopTimer;
+                toast.onmouseleave = Swal.resumeTimer;
+            },
+        });
+    </script>
+
     <!-- Slider -->
     <script src="{{ asset('frontend/js/slider.js') }}"></script>
     <!-- Main js -->
     <script src="{{ asset('frontend/js/output.js') }}"></script>
+    <!-- cart js -->
+    <script src="{{ asset('frontend/js/cart.js') }}"></script>
 
     {{ $js ?? null }}
 </body>

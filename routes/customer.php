@@ -3,10 +3,18 @@
 use App\Http\Controllers\Customer\Auth\AuthenticationController;
 use App\Http\Controllers\Customer\Auth\RegisterController;
 use App\Http\Controllers\Customer\Page\DashboardController;
+use App\Http\Controllers\Frontend\CartController;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware('customer')->prefix('customer')->name('customer.')->group(function() {
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+
+    Route::controller(CartController::class)->group(function() {
+        Route::get('/cart', 'cart')->name('cart');
+        Route::post('/addToCart', 'addToCart')->name('add.to.cart');
+    });
+
+
     Route::post('/logout', [AuthenticationController::class, 'destroy'])->name('logout');
 });
 

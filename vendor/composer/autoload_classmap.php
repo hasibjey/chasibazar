@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'App\\Helpers\\Backend' => $baseDir . '/app/Helpers/Backend.php',
+    'App\\Helpers\\Cart' => $baseDir . '/app/Helpers/Cart.php',
     'App\\Helpers\\Frontend' => $baseDir . '/app/Helpers/Frontend.php',
     'App\\Http\\Controllers\\Admin\\Auth\\AuthenticationController' => $baseDir . '/app/Http/Controllers/Admin/Auth/AuthenticationController.php',
     'App\\Http\\Controllers\\Admin\\Auth\\PasswordResetController' => $baseDir . '/app/Http/Controllers/Admin/Auth/PasswordResetController.php',
@@ -34,6 +35,7 @@ return array(
     'App\\Http\\Controllers\\Frontend\\Auth\\PasswordResetController' => $baseDir . '/app/Http/Controllers/Frontend/Auth/PasswordResetController.php',
     'App\\Http\\Controllers\\Frontend\\Auth\\RegisterController' => $baseDir . '/app/Http/Controllers/Frontend/Auth/RegisterController.php',
     'App\\Http\\Controllers\\Frontend\\Auth\\ValidationController' => $baseDir . '/app/Http/Controllers/Frontend/Auth/ValidationController.php',
+    'App\\Http\\Controllers\\Frontend\\CartController' => $baseDir . '/app/Http/Controllers/Frontend/CartController.php',
     'App\\Http\\Controllers\\Frontend\\HomeController' => $baseDir . '/app/Http/Controllers/Frontend/HomeController.php',
     'App\\Http\\Controllers\\Frontend\\ProductController' => $baseDir . '/app/Http/Controllers/Frontend/ProductController.php',
     'App\\Http\\Controllers\\Frontend\\profile\\DashboardController' => $baseDir . '/app/Http/Controllers/Frontend/profile/DashboardController.php',

@@ -538,6 +538,7 @@ class ComposerStaticInit589cc0f65c3aaa7d4e9024d545bc1974
 
     public static $classMap = array (
         'App\\Helpers\\Backend' => __DIR__ . '/../..' . '/app/Helpers/Backend.php',
+        'App\\Helpers\\Cart' => __DIR__ . '/../..' . '/app/Helpers/Cart.php',
         'App\\Helpers\\Frontend' => __DIR__ . '/../..' . '/app/Helpers/Frontend.php',
         'App\\Http\\Controllers\\Admin\\Auth\\AuthenticationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/Auth/AuthenticationController.php',
         'App\\Http\\Controllers\\Admin\\Auth\\PasswordResetController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/Auth/PasswordResetController.php',
@@ -565,6 +566,7 @@ class ComposerStaticInit589cc0f65c3aaa7d4e9024d545bc1974
         'App\\Http\\Controllers\\Frontend\\Auth\\PasswordResetController' => __DIR__ . '/../..' . '/app/Http/Controllers/Frontend/Auth/PasswordResetController.php',
         'App\\Http\\Controllers\\Frontend\\Auth\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Frontend/Auth/RegisterController.php',
         'App\\Http\\Controllers\\Frontend\\Auth\\ValidationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Frontend/Auth/ValidationController.php',
+        'App\\Http\\Controllers\\Frontend\\CartController' => __DIR__ . '/../..' . '/app/Http/Controllers/Frontend/CartController.php',
         'App\\Http\\Controllers\\Frontend\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/Frontend/HomeController.php',
         'App\\Http\\Controllers\\Frontend\\ProductController' => __DIR__ . '/../..' . '/app/Http/Controllers/Frontend/ProductController.php',
         'App\\Http\\Controllers\\Frontend\\profile\\DashboardController' => __DIR__ . '/../..' . '/app/Http/Controllers/Frontend/profile/DashboardController.php',

@@ -4,12 +4,24 @@ use App\Http\Controllers\Frontend\Auth\AuthenticationController;
 use App\Http\Controllers\Frontend\Auth\PasswordResetController;
 use App\Http\Controllers\Frontend\Auth\RegisterController;
 use App\Http\Controllers\Frontend\Auth\ValidationController;
+use App\Http\Controllers\Frontend\CartController;
 use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\Frontend\ProductController;
 use App\Http\Controllers\Frontend\profile\DashboardController;
 use App\Http\Controllers\Frontend\profile\ProductController as ProfileProductController;
+use App\Models\otp;
 use Illuminate\Support\Facades\Route;
 
+Route::get('/session', function () {
+    return session()->all();
+});
+Route::get('/session/clear', function () {
+    session()->forget('cart');
+    return back();
+});
+Route::get('/otp', function () {
+    return otp::get();
+});
 
 Route::controller(HomeController::class)->group(function() {
     Route::get('/', 'index')->name('home');
@@ -23,6 +35,8 @@ Route::middleware(['web', 'uv'])->group(function() {
 
     Route::prefix('user')->name('user.')->group(function() {
         Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
+        // Product route
         Route::controller(ProfileProductController::class)->prefix('product')->name('product.')->group(function() {
             Route::get('/', 'index')->name('index');
             Route::get('/create', 'create')->name('create');
@@ -33,7 +47,6 @@ Route::middleware(['web', 'uv'])->group(function() {
             Route::get('/image/trash/{id}', 'imageTrash')->name('image.trash');
             Route::get('/trash/{id}', 'trash')->name('trash');
         });
-
     });
 });
 
@@ -76,3 +89,5 @@ Route::controller(ProductController::class)->group(function () {
     Route::get('/products/{slug}', 'products')->name('products');
     Route::get('{slug}/{code}', 'product')->name('product');
 });
+
+

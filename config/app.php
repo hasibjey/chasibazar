@@ -128,6 +128,7 @@ return [
     'aliases' => Facade::defaultAliases()->merge([
         'Frontend' => App\Helpers\Frontend::class,
         'Backend' => App\Helpers\Backend::class,
+        'Cart' => App\Helpers\Cart::class,
     ])->toArray(),
 
 ];
