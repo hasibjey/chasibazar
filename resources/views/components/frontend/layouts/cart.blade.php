@@ -43,10 +43,9 @@
 
             <div class="flex flex-row px-3 justify-between gap-4 mt-6">
                 <a href="{{ route('customer.cart') }}"
-                    class="bg-primary-1 w-full text-center py-1 rounded-sm text-white transition-all duration-300 hover:bg-primary">কার্ট
-                    দেখুন</a>
+                    class="bg-primary-1 w-full text-center py-1 rounded-sm text-white transition-all duration-300 hover:bg-primary">Cart</a>
                 <a href=""
-                    class="bg-primary-1 w-full text-center py-1 rounded-sm text-white transition-all duration-300 hover:bg-primary">চেকআউট</a>
+                    class="bg-primary-1 w-full text-center py-1 rounded-sm text-white capitalize transition-all duration-300 hover:bg-primary">checkout</a>
             </div>
 
         </div>

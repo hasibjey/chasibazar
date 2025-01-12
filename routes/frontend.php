@@ -29,7 +29,7 @@ Route::controller(HomeController::class)->group(function() {
 });
 
 Route::controller(ServiceController::class)->group(function() {
-    Route::get('/labors', 'labor')->name('labor');
+    Route::get('/labor', 'labor')->name('labor');
 });
 Route::controller(ServiceController::class)->group(function() {
     Route::get('/labors/booking', 'laborCreate')->name('labor.create');

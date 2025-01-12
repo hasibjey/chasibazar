@@ -103,6 +103,10 @@
                                     class="text-primary-1 transition-all duration-300 hover:text-primary italic">Login</a>
                                 to your account to view the farmer information.
                             </p>
+                            <div class="mt-4">
+                                <a href="{{ route('customer.register.index') }}" class="inline-block bg-primary py-0.5 px-5 text-sm text-white rounded-sm transition-all duration-300 hover:bg-green-900">Register</a>
+                                <a href="{{ route('customer.login') }}" class="inline-block bg-primary py-0.5 px-5 text-sm text-white rounded-sm transition-all duration-300 hover:bg-green-900">Login</a>
+                            </div>
                             @endguest
                         </div>
 

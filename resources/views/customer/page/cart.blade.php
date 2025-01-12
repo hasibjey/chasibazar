@@ -51,7 +51,7 @@
                                     <label class="text-sm mb-1 block font-semibold">Coupon code</label>
                                     <div class="grid grid-cols-4 gap-2">
                                         <input type="text" class=" col-span-3 border w-full h-9 outline-none px-3 rounded-md text-sm py-2 transition-all duration-300 focus:border-primary focus:shadow-sm focus:shadow-primary-1" placeholder="Enter your coupon code....">
-                                        <button class="bg-primary-1 px-4 rounded-md text-white transition-all duration-300 hover:bg-primary">আবেদন করুন</button>
+                                        <button class="bg-primary-1 px-4 rounded-md text-white transition-all duration-300 hover:bg-primary">Apply</button>
                                     </div>
                                 </td>
                                 <td class="!border-0"></td>
@@ -81,7 +81,7 @@
                 </div>
 
                 <div class="text-end mt-10">
-                    <a href="" class="bg-primary-1 px-10 py-2 rounded-md text-white transition-all duration-300 hover:bg-primary">চেকআউট</a>
+                    <a href="" class="bg-primary-1 px-10 py-2 rounded-md text-white transition-all duration-300 hover:bg-primary">Checkout</a>
                 </div>
             </div>
         </section>

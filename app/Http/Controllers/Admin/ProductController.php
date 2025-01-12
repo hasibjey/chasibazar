@@ -38,8 +38,8 @@ class ProductController extends Controller
     {
         $request->validate([
             'title' => ['required', 'string', 'unique:products,title'],
-            'category' => ['required', 'numeric'],
-            'sub_category' => ['required', 'numeric'],
+            'category' => ['required'],
+            'sub_category' => ['required'],
             'description' => ['required'],
             'quantity' => ['required'],
             'price' => ['required'],

@@ -58,6 +58,62 @@
             </section>
         @endif
 
+        @if(count($services) > 0)
+        <section class="my-32">
+            <div class="container flex flex-col gap-36">
+                @foreach ($services as $key => $list)
+                    @if($key%2==0)
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="mr-10">
+                            <h2 class="text-5xl mb-14 font-semibold">{{ $list->title }}</h2>
+                            <h3 class="text-justify mb-10">
+                                {!! $list->description !!}
+                            </h3>
+                            <a href="{{ $list->slug }}"
+                                class="border border-primary w-2/6 rounded-full py-3 px-8 flex flex-row items-center justify-between transition-all duration-300 hover:bg-primary hover:text-white">
+                                <span class="capitalize">learn more</span>
+                                <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="size-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="flex justify-end">
+                            <img src="{{ asset($list->image) }}" alt="{{ $list->title }}" class="w-[488px] h-[580px] rounded-lg">
+                        </div>
+                    </div>
+                    @else
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="flex justify-start">
+                            <img src="{{ asset($list->image) }}" alt="{{ $list->title }}" class="w-[488px] h-[580px] rounded-lg">
+                        </div>
+                        <div class="ml-10">
+                            <h2 class="text-5xl mb-14 font-semibold">{{ $list->title }}</h2>
+                            <h3 class="text-justify mb-10">
+                                {!! $list->description !!}
+                            </h3>
+                            <a href="{{ $list->slug }}"
+                                class="border border-primary w-2/6 rounded-full py-3 px-8 flex flex-row items-center justify-between transition-all duration-300 hover:bg-primary hover:text-white">
+                                <span class="capitalize">learn more</span>
+                                <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="size-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    @endif
+                @endforeach
+            </div>
+        </section>
+        @endif
+
         @if(count($items)>0)
         @foreach ($items as $key => $item)
         @if($key%2==0)

@@ -115,7 +115,7 @@
                             class="nav-item {{ Str::startsWith(Route::currentRouteName(), 'admin.services.') ? 'menu-open' : '' }}">
                             <a href="#"
                                 class="nav-link {{ Str::startsWith(Route::currentRouteName(), 'admin.services.') ? 'active' : '' }}">
-                                <i class="nav-icon fa fa-address-book"></i>
+                                <i class="nav-icon fa fa-wrench"></i>
                                 <p>
                                     Service management
                                     <i class="right fas fa-angle-left"></i>
