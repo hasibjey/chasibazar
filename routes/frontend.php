@@ -9,6 +9,7 @@ use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\Frontend\ProductController;
 use App\Http\Controllers\Frontend\profile\DashboardController;
 use App\Http\Controllers\Frontend\profile\ProductController as ProfileProductController;
+use App\Http\Controllers\Frontend\ServiceController;
 use App\Models\otp;
 use Illuminate\Support\Facades\Route;
 
@@ -25,6 +26,21 @@ Route::get('/otp', function () {
 
 Route::controller(HomeController::class)->group(function() {
     Route::get('/', 'index')->name('home');
+});
+
+Route::controller(ServiceController::class)->group(function() {
+    Route::get('/labors', 'labor')->name('labor');
+});
+Route::controller(ServiceController::class)->group(function() {
+    Route::get('/labors/booking', 'laborCreate')->name('labor.create');
+});
+
+Route::controller(ServiceController::class)->group(function () {
+    Route::get('/specialist', 'specialist')->name('specialist');
+});
+
+Route::controller(ServiceController::class)->group(function () {
+    Route::get('/event', 'event')->name('event');
 });
 
 

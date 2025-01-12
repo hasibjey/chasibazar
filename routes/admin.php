@@ -9,11 +9,15 @@ use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\CommonController;
 use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\EventController;
+use App\Http\Controllers\Admin\LaborController;
 use App\Http\Controllers\Admin\PageController;
 use App\Http\Controllers\Admin\Permission\PermissionController;
 use App\Http\Controllers\Admin\Permission\RoleController;
 use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\SliderController;
+use App\Http\Controllers\Admin\SpecialistController;
 use App\Http\Controllers\Admin\SubCategoryController;
 use Illuminate\Support\Facades\Route;
 
@@ -105,6 +109,38 @@ Route::middleware(['admin'])->prefix('admin')->name('admin.')->group(function() 
     Route::controller(ProductController::class)->prefix('products')->name('product.')->group(function() {
         Route::get('/', 'index')->name('index');
         Route::get('/create', 'create')->name('create');
+        Route::post('/store', 'store')->name('store');
+        Route::post('/status', 'status')->name('status');
+        Route::post('/update', 'update')->name('update');
+        Route::get('/trash/{id}', 'trash')->name('trash');
+    });
+
+    Route::controller(ServiceController::class)->prefix('services')->name('services.')->group(function() {
+        Route::get('/', 'index')->name('index');
+        Route::post('/store', 'store')->name('store');
+        Route::post('/status', 'status')->name('status');
+        Route::post('/update', 'update')->name('update');
+        Route::get('/trash/{id}', 'trash')->name('trash');
+    });
+
+    Route::controller(LaborController::class)->prefix('labors')->name('services.labors.')->group(function() {
+        Route::get('/', 'index')->name('index');
+        Route::post('/store', 'store')->name('store');
+        Route::post('/status', 'status')->name('status');
+        Route::post('/update', 'update')->name('update');
+        Route::get('/trash/{id}', 'trash')->name('trash');
+    });
+
+    Route::controller(SpecialistController::class)->prefix('specialist')->name('services.specialist.')->group(function() {
+        Route::get('/', 'index')->name('index');
+        Route::post('/store', 'store')->name('store');
+        Route::post('/status', 'status')->name('status');
+        Route::post('/update', 'update')->name('update');
+        Route::get('/trash/{id}', 'trash')->name('trash');
+    });
+
+    Route::controller(EventController::class)->prefix('events')->name('services.events.')->group(function() {
+        Route::get('/', 'index')->name('index');
         Route::post('/store', 'store')->name('store');
         Route::post('/status', 'status')->name('status');
         Route::post('/update', 'update')->name('update');

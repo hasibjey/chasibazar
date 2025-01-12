@@ -19,7 +19,7 @@ class ProductController extends Controller
         $paginate = isset($request->paginate)? $request->paginate : 20;
 
         $items = Product::with(['Category:id,name', 'SubCategory:id,name'])
-        ->select('id', 'user_id', 'title', 'quantity', 'price', 'status')
+        ->select('id', 'user_id', 'title', 'quantity', 'price', 'status', 'category_id', 'sub_category_id')
         ->orderBy('created_at', 'DESC');
         $items = $items->paginate($paginate);
 

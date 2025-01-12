@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Dec 10, 2024 at 03:49 PM
+-- Generation Time: Jan 12, 2025 at 03:08 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.1.17
 
@@ -54,7 +54,7 @@ CREATE TABLE `cache` (
 --
 
 INSERT INTO `cache` (`key`, `value`, `expiration`) VALUES
-('spatie.permission.cache', 'a:3:{s:5:\"alias\";a:4:{s:1:\"a\";s:2:\"id\";s:1:\"b\";s:4:\"name\";s:1:\"c\";s:10:\"guard_name\";s:1:\"r\";s:5:\"roles\";}s:11:\"permissions\";a:34:{i:0;a:4:{s:1:\"a\";i:1;s:1:\"b\";s:16:\"permissions view\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:1;a:4:{s:1:\"a\";i:2;s:1:\"b\";s:18:\"permissions create\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:2;a:4:{s:1:\"a\";i:3;s:1:\"b\";s:11:\"admins view\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:3;a:4:{s:1:\"a\";i:4;s:1:\"b\";s:10:\"roles view\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:4;a:4:{s:1:\"a\";i:5;s:1:\"b\";s:18:\"permissions update\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:5;a:4:{s:1:\"a\";i:6;s:1:\"b\";s:18:\"permissions delete\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:6;a:4:{s:1:\"a\";i:7;s:1:\"b\";s:13:\"admins create\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:7;a:4:{s:1:\"a\";i:8;s:1:\"b\";s:13:\"admins update\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:8;a:4:{s:1:\"a\";i:9;s:1:\"b\";s:13:\"admins delete\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:9;a:4:{s:1:\"a\";i:10;s:1:\"b\";s:12:\"roles create\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:10;a:4:{s:1:\"a\";i:11;s:1:\"b\";s:12:\"roles update\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:11;a:4:{s:1:\"a\";i:12;s:1:\"b\";s:12:\"roles delete\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:12;a:4:{s:1:\"a\";i:13;s:1:\"b\";s:15:\"categories view\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:13;a:4:{s:1:\"a\";i:14;s:1:\"b\";s:17:\"categories create\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:14;a:4:{s:1:\"a\";i:15;s:1:\"b\";s:17:\"categories update\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:15;a:4:{s:1:\"a\";i:16;s:1:\"b\";s:17:\"categories delete\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:16;a:4:{s:1:\"a\";i:17;s:1:\"b\";s:19:\"sub-categories view\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:17;a:4:{s:1:\"a\";i:18;s:1:\"b\";s:21:\"sub-categories create\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:18;a:4:{s:1:\"a\";i:19;s:1:\"b\";s:21:\"sub-categories update\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:19;a:4:{s:1:\"a\";i:20;s:1:\"b\";s:21:\"sub-categories delete\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:20;a:4:{s:1:\"a\";i:21;s:1:\"b\";s:13:\"products view\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:21;a:4:{s:1:\"a\";i:22;s:1:\"b\";s:15:\"products create\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:22;a:4:{s:1:\"a\";i:23;s:1:\"b\";s:15:\"products update\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:23;a:4:{s:1:\"a\";i:24;s:1:\"b\";s:15:\"products delete\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:24;a:4:{s:1:\"a\";i:25;s:1:\"b\";s:15:\"contacts create\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:25;a:4:{s:1:\"a\";i:26;s:1:\"b\";s:13:\"contacts view\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:26;a:4:{s:1:\"a\";i:27;s:1:\"b\";s:15:\"contacts update\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:27;a:4:{s:1:\"a\";i:28;s:1:\"b\";s:15:\"contacts delete\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:28;a:4:{s:1:\"a\";i:29;s:1:\"b\";s:13:\"branch create\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:29;a:4:{s:1:\"a\";i:30;s:1:\"b\";s:11:\"branch view\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:30;a:4:{s:1:\"a\";i:31;s:1:\"b\";s:13:\"branch update\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:31;a:4:{s:1:\"a\";i:32;s:1:\"b\";s:13:\"branch delete\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:32;a:4:{s:1:\"a\";i:33;s:1:\"b\";s:15:\"navigation view\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:33;a:4:{s:1:\"a\";i:34;s:1:\"b\";s:10:\"index view\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}}s:5:\"roles\";a:1:{i:0;a:3:{s:1:\"a\";i:1;s:1:\"b\";s:11:\"super admin\";s:1:\"c\";s:5:\"admin\";}}}', 1733860238);
+('spatie.permission.cache', 'a:3:{s:5:\"alias\";a:4:{s:1:\"a\";s:2:\"id\";s:1:\"b\";s:4:\"name\";s:1:\"c\";s:10:\"guard_name\";s:1:\"r\";s:5:\"roles\";}s:11:\"permissions\";a:43:{i:0;a:4:{s:1:\"a\";i:1;s:1:\"b\";s:16:\"permissions view\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:1;a:4:{s:1:\"a\";i:2;s:1:\"b\";s:18:\"permissions create\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:2;a:4:{s:1:\"a\";i:3;s:1:\"b\";s:11:\"admins view\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:3;a:4:{s:1:\"a\";i:4;s:1:\"b\";s:10:\"roles view\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:4;a:4:{s:1:\"a\";i:5;s:1:\"b\";s:15:\"categories view\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:5;a:4:{s:1:\"a\";i:6;s:1:\"b\";s:17:\"categories update\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:6;a:4:{s:1:\"a\";i:7;s:1:\"b\";s:17:\"categories delete\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:7;a:4:{s:1:\"a\";i:8;s:1:\"b\";s:17:\"categories create\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:8;a:4:{s:1:\"a\";i:9;s:1:\"b\";s:21:\"sub-categories create\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:9;a:4:{s:1:\"a\";i:10;s:1:\"b\";s:21:\"sub-categories update\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:10;a:4:{s:1:\"a\";i:11;s:1:\"b\";s:19:\"sub-categories view\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:11;a:4:{s:1:\"a\";i:12;s:1:\"b\";s:21:\"sub-categories delete\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:12;a:4:{s:1:\"a\";i:13;s:1:\"b\";s:15:\"products create\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:13;a:4:{s:1:\"a\";i:14;s:1:\"b\";s:15:\"products update\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:14;a:4:{s:1:\"a\";i:15;s:1:\"b\";s:13:\"products view\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:15;a:4:{s:1:\"a\";i:16;s:1:\"b\";s:15:\"products delete\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:16;a:4:{s:1:\"a\";i:17;s:1:\"b\";s:13:\"contacts view\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:17;a:4:{s:1:\"a\";i:18;s:1:\"b\";s:15:\"contacts create\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:18;a:4:{s:1:\"a\";i:19;s:1:\"b\";s:15:\"contacts update\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:19;a:4:{s:1:\"a\";i:20;s:1:\"b\";s:15:\"contacts delete\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:20;a:4:{s:1:\"a\";i:21;s:1:\"b\";s:13:\"branch create\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:21;a:4:{s:1:\"a\";i:22;s:1:\"b\";s:13:\"branch update\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:22;a:4:{s:1:\"a\";i:23;s:1:\"b\";s:13:\"branch delete\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:23;a:4:{s:1:\"a\";i:24;s:1:\"b\";s:11:\"branch view\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:24;a:4:{s:1:\"a\";i:25;s:1:\"b\";s:13:\"admins create\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:25;a:4:{s:1:\"a\";i:26;s:1:\"b\";s:13:\"admins update\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:26;a:4:{s:1:\"a\";i:27;s:1:\"b\";s:13:\"admins delete\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:27;a:4:{s:1:\"a\";i:28;s:1:\"b\";s:10:\"labor view\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:28;a:4:{s:1:\"a\";i:29;s:1:\"b\";s:12:\"labor update\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:29;a:4:{s:1:\"a\";i:30;s:1:\"b\";s:12:\"labor create\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:30;a:4:{s:1:\"a\";i:31;s:1:\"b\";s:12:\"labor delete\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:31;a:4:{s:1:\"a\";i:32;s:1:\"b\";s:12:\"service view\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:32;a:4:{s:1:\"a\";i:33;s:1:\"b\";s:14:\"service update\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:33;a:4:{s:1:\"a\";i:34;s:1:\"b\";s:14:\"service create\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:34;a:4:{s:1:\"a\";i:35;s:1:\"b\";s:14:\"service delete\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:35;a:4:{s:1:\"a\";i:36;s:1:\"b\";s:15:\"specialist view\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:36;a:4:{s:1:\"a\";i:37;s:1:\"b\";s:17:\"specialist create\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:37;a:4:{s:1:\"a\";i:38;s:1:\"b\";s:17:\"specialist update\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:38;a:4:{s:1:\"a\";i:39;s:1:\"b\";s:17:\"specialist delete\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:39;a:4:{s:1:\"a\";i:40;s:1:\"b\";s:10:\"event view\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:40;a:4:{s:1:\"a\";i:41;s:1:\"b\";s:12:\"event create\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:41;a:4:{s:1:\"a\";i:42;s:1:\"b\";s:12:\"event update\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}i:42;a:4:{s:1:\"a\";i:43;s:1:\"b\";s:12:\"event delete\";s:1:\"c\";s:5:\"admin\";s:1:\"r\";a:1:{i:0;i:1;}}}s:5:\"roles\";a:1:{i:0;a:3:{s:1:\"a\";i:1;s:1:\"b\";s:11:\"super admin\";s:1:\"c\";s:5:\"admin\";}}}', 1736777023);
 
 -- --------------------------------------------------------
 
@@ -88,13 +88,6 @@ CREATE TABLE `categories` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Dumping data for table `categories`
---
-
-INSERT INTO `categories` (`id`, `name`, `slug`, `description`, `status`, `nav_status`, `nav_position`, `index_status`, `index_position`, `created_at`, `updated_at`) VALUES
-(1, 'Product', 'product', '<p>this is a product</p>', 1, 1, NULL, NULL, NULL, '2024-12-08 22:25:57', NULL);
-
 -- --------------------------------------------------------
 
 --
@@ -116,7 +109,25 @@ CREATE TABLE `contacts` (
 --
 
 INSERT INTO `contacts` (`id`, `email`, `phone`, `whatsapp`, `calling_hours`, `created_at`, `updated_at`) VALUES
-(1, 'info@cashirbazar.com', NULL, NULL, NULL, '2024-12-08 10:18:21', NULL);
+(1, 'info@cashirbazar.com', NULL, NULL, NULL, '2025-01-12 07:55:07', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `events`
+--
+
+CREATE TABLE `events` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `service_id` bigint(20) UNSIGNED NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `type` varchar(255) NOT NULL,
+  `timestamp` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `description` text NOT NULL,
+  `status` tinyint(1) NOT NULL DEFAULT 1,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -172,6 +183,24 @@ CREATE TABLE `job_batches` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `labors`
+--
+
+CREATE TABLE `labors` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `service_id` bigint(20) UNSIGNED NOT NULL,
+  `type` varchar(255) NOT NULL,
+  `shift` varchar(255) NOT NULL,
+  `cost` double NOT NULL,
+  `description` text NOT NULL,
+  `status` tinyint(1) NOT NULL DEFAULT 1,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `migrations`
 --
 
@@ -195,10 +224,14 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (7, '2024_11_23_181850_create_sub_categories_table', 1),
 (8, '2024_11_24_141221_create_contacts_table', 1),
 (9, '2024_11_24_233858_create_branches_table', 1),
-(10, '2024_11_25_003016_create_pages_table', 1),
-(11, '2024_11_30_193005_create_sliders_table', 1),
-(12, '2024_11_30_215118_create_products_table', 1),
-(13, '2024_12_07_193111_create_product_images_table', 1);
+(10, '2024_11_30_193005_create_sliders_table', 1),
+(11, '2024_11_30_215118_create_products_table', 1),
+(12, '2024_12_07_193111_create_product_images_table', 1),
+(13, '2025_01_12_075439_create_pages_table', 1),
+(14, '2025_01_12_075440_create_services_table', 1),
+(15, '2025_01_12_075441_create_labors_table', 1),
+(16, '2025_01_12_075636_create_specialists_table', 1),
+(17, '2025_01_12_075754_create_events_table', 1);
 
 -- --------------------------------------------------------
 
@@ -253,6 +286,13 @@ CREATE TABLE `otps` (
 
 CREATE TABLE `pages` (
   `id` bigint(20) UNSIGNED NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `hero_image` varchar(255) DEFAULT NULL,
+  `category_id` bigint(20) UNSIGNED NOT NULL,
+  `sub_category_id` bigint(20) UNSIGNED NOT NULL,
+  `labor_id` tinyint(1) DEFAULT NULL,
+  `specialist_id` tinyint(1) DEFAULT NULL,
+  `event_id` tinyint(1) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -288,40 +328,49 @@ CREATE TABLE `permissions` (
 --
 
 INSERT INTO `permissions` (`id`, `name`, `guard_name`, `created_at`, `updated_at`) VALUES
-(1, 'permissions view', 'admin', '2024-12-08 10:18:21', '2024-12-08 10:18:21'),
-(2, 'permissions create', 'admin', '2024-12-08 10:18:21', '2024-12-08 10:18:21'),
-(3, 'admins view', 'admin', '2024-12-08 10:18:21', '2024-12-08 10:18:21'),
-(4, 'roles view', 'admin', '2024-12-08 10:18:21', '2024-12-08 10:18:21'),
-(5, 'permissions update', 'admin', '2024-12-08 10:18:58', NULL),
-(6, 'permissions delete', 'admin', '2024-12-08 10:19:02', NULL),
-(7, 'admins create', 'admin', '2024-12-08 10:19:12', NULL),
-(8, 'admins update', 'admin', '2024-12-08 10:19:14', NULL),
-(9, 'admins delete', 'admin', '2024-12-08 10:19:17', NULL),
-(10, 'roles create', 'admin', '2024-12-08 10:19:28', NULL),
-(11, 'roles update', 'admin', '2024-12-08 10:19:34', NULL),
-(12, 'roles delete', 'admin', '2024-12-08 10:19:38', NULL),
-(13, 'categories view', 'admin', '2024-12-08 10:20:12', NULL),
-(14, 'categories create', 'admin', '2024-12-08 10:20:14', NULL),
-(15, 'categories update', 'admin', '2024-12-08 10:20:17', NULL),
-(16, 'categories delete', 'admin', '2024-12-08 10:20:19', NULL),
-(17, 'sub-categories view', 'admin', '2024-12-08 10:20:32', NULL),
-(18, 'sub-categories create', 'admin', '2024-12-08 10:20:34', NULL),
-(19, 'sub-categories update', 'admin', '2024-12-08 10:20:38', NULL),
-(20, 'sub-categories delete', 'admin', '2024-12-08 10:20:40', '2024-12-08 10:22:47'),
-(21, 'products view', 'admin', '2024-12-08 10:21:04', NULL),
-(22, 'products create', 'admin', '2024-12-08 10:21:09', NULL),
-(23, 'products update', 'admin', '2024-12-08 10:21:12', NULL),
-(24, 'products delete', 'admin', '2024-12-08 10:21:14', NULL),
-(25, 'contacts create', 'admin', '2024-12-08 10:21:23', NULL),
-(26, 'contacts view', 'admin', '2024-12-08 10:21:28', NULL),
-(27, 'contacts update', 'admin', '2024-12-08 10:21:31', NULL),
-(28, 'contacts delete', 'admin', '2024-12-08 10:21:34', NULL),
-(29, 'branch create', 'admin', '2024-12-08 10:21:46', NULL),
-(30, 'branch view', 'admin', '2024-12-08 10:21:49', NULL),
-(31, 'branch update', 'admin', '2024-12-08 10:21:52', NULL),
-(32, 'branch delete', 'admin', '2024-12-08 10:21:56', NULL),
-(33, 'navigation view', 'admin', '2024-12-08 10:22:12', NULL),
-(34, 'index view', 'admin', '2024-12-08 10:22:18', NULL);
+(1, 'permissions view', 'admin', '2025-01-12 07:55:07', '2025-01-12 07:55:07'),
+(2, 'permissions create', 'admin', '2025-01-12 07:55:07', '2025-01-12 07:55:07'),
+(3, 'admins view', 'admin', '2025-01-12 07:55:07', '2025-01-12 07:55:07'),
+(4, 'roles view', 'admin', '2025-01-12 07:55:07', '2025-01-12 07:55:07'),
+(5, 'categories view', 'admin', '2025-01-12 07:55:46', NULL),
+(6, 'categories update', 'admin', '2025-01-12 07:55:49', NULL),
+(7, 'categories delete', 'admin', '2025-01-12 07:55:52', NULL),
+(8, 'categories create', 'admin', '2025-01-12 07:56:03', NULL),
+(9, 'sub-categories create', 'admin', '2025-01-12 07:56:14', NULL),
+(10, 'sub-categories update', 'admin', '2025-01-12 07:56:20', NULL),
+(11, 'sub-categories view', 'admin', '2025-01-12 07:56:22', NULL),
+(12, 'sub-categories delete', 'admin', '2025-01-12 07:56:25', NULL),
+(13, 'products create', 'admin', '2025-01-12 07:56:37', NULL),
+(14, 'products update', 'admin', '2025-01-12 07:56:40', NULL),
+(15, 'products view', 'admin', '2025-01-12 07:56:43', NULL),
+(16, 'products delete', 'admin', '2025-01-12 07:56:46', NULL),
+(17, 'contacts view', 'admin', '2025-01-12 07:56:54', NULL),
+(18, 'contacts create', 'admin', '2025-01-12 07:56:59', NULL),
+(19, 'contacts update', 'admin', '2025-01-12 07:57:01', NULL),
+(20, 'contacts delete', 'admin', '2025-01-12 07:57:04', NULL),
+(21, 'branch create', 'admin', '2025-01-12 07:57:12', NULL),
+(22, 'branch update', 'admin', '2025-01-12 07:57:15', NULL),
+(23, 'branch delete', 'admin', '2025-01-12 07:57:19', NULL),
+(24, 'branch view', 'admin', '2025-01-12 07:57:23', NULL),
+(25, 'admins create', 'admin', '2025-01-12 07:57:56', NULL),
+(26, 'admins update', 'admin', '2025-01-12 07:58:03', NULL),
+(27, 'admins delete', 'admin', '2025-01-12 07:58:06', NULL),
+(28, 'labor view', 'admin', '2025-01-12 07:58:40', NULL),
+(29, 'labor update', 'admin', '2025-01-12 07:58:43', NULL),
+(30, 'labor create', 'admin', '2025-01-12 07:58:56', NULL),
+(31, 'labor delete', 'admin', '2025-01-12 07:59:00', NULL),
+(32, 'service view', 'admin', '2025-01-12 08:01:57', NULL),
+(33, 'service update', 'admin', '2025-01-12 08:02:00', NULL),
+(34, 'service create', 'admin', '2025-01-12 08:02:03', NULL),
+(35, 'service delete', 'admin', '2025-01-12 08:02:05', NULL),
+(36, 'specialist view', 'admin', '2025-01-12 08:02:44', NULL),
+(37, 'specialist create', 'admin', '2025-01-12 08:02:46', NULL),
+(38, 'specialist update', 'admin', '2025-01-12 08:02:49', NULL),
+(39, 'specialist delete', 'admin', '2025-01-12 08:02:52', NULL),
+(40, 'event view', 'admin', '2025-01-12 08:03:23', NULL),
+(41, 'event create', 'admin', '2025-01-12 08:03:26', NULL),
+(42, 'event update', 'admin', '2025-01-12 08:03:29', NULL),
+(43, 'event delete', 'admin', '2025-01-12 08:03:32', NULL);
 
 -- --------------------------------------------------------
 
@@ -339,21 +388,12 @@ CREATE TABLE `products` (
   `sub_category_id` bigint(20) UNSIGNED NOT NULL,
   `description` text DEFAULT NULL,
   `quantity` float NOT NULL,
-  `unit` varchar(191) NOT NULL,
   `price` float NOT NULL,
   `thumbnail` varchar(255) DEFAULT NULL,
   `status` tinyint(1) NOT NULL DEFAULT 1,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `products`
---
-
-INSERT INTO `products` (`id`, `user_id`, `title`, `slug`, `code`, `category_id`, `sub_category_id`, `description`, `quantity`, `unit`, `price`, `thumbnail`, `status`, `created_at`, `updated_at`) VALUES
-(4, 3, 'red potato', 'red_potato', '5rkbg', 1, 1, '<p>This is red potato</p>', 200, 'kg', 15, '/images/products/20241209191227.webp', 1, '2024-12-09 13:44:55', '2024-12-09 13:46:27'),
-(5, 3, 'লাল বেগুন', 'লাল_বেগুন', 'gbhku', 1, 2, 'এটা লাল বেগুন।', 220, 'kg', 10, '/images/products/20241209191246.webp', 1, '2024-12-09 13:54:46', '2024-12-09 15:04:13');
 
 -- --------------------------------------------------------
 
@@ -368,16 +408,6 @@ CREATE TABLE `product_images` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `product_images`
---
-
-INSERT INTO `product_images` (`id`, `product_id`, `image`, `created_at`, `updated_at`) VALUES
-(7, 4, '/images/products/20241209191255_99.webp', '2024-12-09 13:44:55', NULL),
-(9, 4, '/images/products/20241209191232_1.webp', '2024-12-09 13:45:32', NULL),
-(10, 5, '/images/products/20241209191246_84.webp', '2024-12-09 13:54:46', NULL),
-(11, 5, '/images/products/20241209191247_34.webp', '2024-12-09 13:54:47', NULL);
 
 -- --------------------------------------------------------
 
@@ -398,7 +428,7 @@ CREATE TABLE `roles` (
 --
 
 INSERT INTO `roles` (`id`, `name`, `guard_name`, `created_at`, `updated_at`) VALUES
-(1, 'super admin', 'admin', '2024-12-08 10:18:21', '2024-12-08 10:18:21');
+(1, 'super admin', 'admin', '2025-01-12 07:55:07', '2025-01-12 07:55:07');
 
 -- --------------------------------------------------------
 
@@ -449,7 +479,44 @@ INSERT INTO `role_has_permissions` (`permission_id`, `role_id`) VALUES
 (31, 1),
 (32, 1),
 (33, 1),
-(34, 1);
+(34, 1),
+(35, 1),
+(36, 1),
+(37, 1),
+(38, 1),
+(39, 1),
+(40, 1),
+(41, 1),
+(42, 1),
+(43, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `services`
+--
+
+CREATE TABLE `services` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `slug` varchar(255) NOT NULL,
+  `image` varchar(255) NOT NULL,
+  `description` text NOT NULL,
+  `hero_image` varchar(255) NOT NULL,
+  `status` tinyint(1) NOT NULL DEFAULT 1,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `services`
+--
+
+INSERT INTO `services` (`id`, `title`, `slug`, `image`, `description`, `hero_image`, `status`, `created_at`, `updated_at`) VALUES
+(1, 'Labor', 'labor', 'demo.png', 'This is labor', 'demo.png', 1, '2025-01-12 07:55:07', NULL),
+(2, 'Specialist', 'specialist', 'demo.png', 'This is Specialist', 'demo.png', 1, '2025-01-12 07:55:07', NULL),
+(3, 'Event', 'event', 'demo.png', 'This is Event', 'demo.png', 1, '2025-01-12 07:55:07', NULL),
+(4, 'Delivery', 'delivery', 'demo.png', 'This is Delivery', 'demo.png', 1, '2025-01-12 07:55:07', NULL);
 
 -- --------------------------------------------------------
 
@@ -471,10 +538,7 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('1XUimSgWYAOfhlrVfdxNia2LR86gyIGJZO0aJ656', 3, '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiNExOVGpUT1EycjB0cXUwUTRGcFUyWDdDSDZWWlRJenpTem5sQnVHVCI7czoxODoiZmxhc2hlcjo6ZW52ZWxvcGVzIjthOjA6e31zOjk6Il9wcmV2aW91cyI7YToxOntzOjM6InVybCI7czoyMToiaHR0cDovL2xvY2FsaG9zdDo4MDAwIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6Mzt9', 1733778279),
-('6Qvav2UXjJS0GUgsAty4yfsTyTgwAxVJoKBrYPNl', NULL, '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoia05GVG9aZHdoRE1Da3UxTHZMMFI4bk9kcDJ1MTFJZFY2T3dScmx3UCI7czoxODoiZmxhc2hlcjo6ZW52ZWxvcGVzIjthOjA6e31zOjk6Il9wcmV2aW91cyI7YToxOntzOjM6InVybCI7czoyMToiaHR0cDovL2xvY2FsaG9zdDo4MDAwIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1733842165),
-('hII0NCbADvwavPuhBr2VVyqb6lFLLn5D1RC5Hrec', NULL, '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiTFM2THhDODlyWVdjV0t6MHpXMkM5UFVkalZKM2NSU2hJdnA5dUg1eCI7czoxODoiZmxhc2hlcjo6ZW52ZWxvcGVzIjthOjA6e31zOjk6Il9wcmV2aW91cyI7YToxOntzOjM6InVybCI7czozNToiaHR0cDovL2xvY2FsaG9zdDo4MDAwL2FkbWluL3Byb2ZpbGUiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX1zOjUyOiJsb2dpbl9hZG1pbl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjE7fQ==', 1733778265),
-('uliJWA3zbfZ9YqzkbzIiDhxGrtYBaTyahN7rdn29', NULL, '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiSzdpTTVOaGN1b0dvY0VCZkRUa2ROckVMQ0NFRGFEUUttaDBKbWdXVyI7czoxODoiZmxhc2hlcjo6ZW52ZWxvcGVzIjthOjA6e31zOjk6Il9wcmV2aW91cyI7YToxOntzOjM6InVybCI7czoyMToiaHR0cDovL2xvY2FsaG9zdDo4MDAwIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1733831928);
+('SmsEnpdYa212YEnHbaZaqSHgdBvVK6U8jSXtJZdj', NULL, '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiRUY3WDZnSkg4eUVWQVhoUUFrdjFhSkk2REJlMlNzMFlNUjY0aWgzciI7czoxODoiZmxhc2hlcjo6ZW52ZWxvcGVzIjthOjA6e31zOjk6Il9wcmV2aW91cyI7YToxOntzOjM6InVybCI7czoyNzoiaHR0cDovL2xvY2FsaG9zdDo4MDAwL2V2ZW50Ijt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MjoibG9naW5fYWRtaW5fNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToxO30=', 1736690860);
 
 -- --------------------------------------------------------
 
@@ -486,6 +550,22 @@ CREATE TABLE `sliders` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `image` varchar(255) NOT NULL,
   `position` int(11) NOT NULL,
+  `status` tinyint(1) NOT NULL DEFAULT 1,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `specialists`
+--
+
+CREATE TABLE `specialists` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `service_id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `description` varchar(255) NOT NULL,
   `status` tinyint(1) NOT NULL DEFAULT 1,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -509,14 +589,6 @@ CREATE TABLE `sub_categories` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `sub_categories`
---
-
-INSERT INTO `sub_categories` (`id`, `image`, `slug`, `name`, `category_id`, `description`, `status`, `nav_status`, `created_at`, `updated_at`) VALUES
-(1, '/images/sub-categories/20241209041219.webp', 'potato', 'Potato', 1, '<p>this is alu</p>', 1, NULL, '2024-12-08 22:26:19', NULL),
-(2, '/images/sub-categories/20241209191237.webp', 'বেগুন', 'বেগুন', 1, 'এটা বেগুন', 1, NULL, '2024-12-09 13:51:37', NULL);
 
 -- --------------------------------------------------------
 
@@ -543,8 +615,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `phone`, `email_verified_at`, `password`, `type`, `role`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Admin', 'admin@gmail.com', NULL, NULL, '$2y$12$MkuZMwwQPr4YI5R.F4IG8.KibU54vRRtv8RLEEHEa.WAQc8Fn2W2q', 1, NULL, NULL, '2024-12-08 10:18:21', '2024-12-08 10:18:21'),
-(3, 'Md Hasibur Rahman', NULL, '01945907007', '2024-12-08 10:49:44', '$2y$12$IWePVHmGerNQ4GmJhdqlVe1Y4ByWz5WKNblYNWSJHG9l/Ab6ROBce', 2, NULL, NULL, '2024-12-08 10:39:38', '2024-12-08 10:49:44');
+(1, 'Admin', 'admin@gmail.com', NULL, NULL, '$2y$12$TkltK7F6WGVGhf8qvspHu.PfyZ/iEXSClU4Qhr6/Lg6kY4bvY.Zxi', 1, NULL, NULL, '2025-01-12 07:55:07', '2025-01-12 07:55:07');
 
 --
 -- Indexes for dumped tables
@@ -583,6 +654,13 @@ ALTER TABLE `contacts`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `events`
+--
+ALTER TABLE `events`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `events_service_id_foreign` (`service_id`);
+
+--
 -- Indexes for table `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
@@ -601,6 +679,13 @@ ALTER TABLE `jobs`
 --
 ALTER TABLE `job_batches`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `labors`
+--
+ALTER TABLE `labors`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `labors_service_id_foreign` (`service_id`);
 
 --
 -- Indexes for table `migrations`
@@ -632,7 +717,9 @@ ALTER TABLE `otps`
 -- Indexes for table `pages`
 --
 ALTER TABLE `pages`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `pages_category_id_foreign` (`category_id`),
+  ADD KEY `pages_sub_category_id_foreign` (`sub_category_id`);
 
 --
 -- Indexes for table `password_reset_tokens`
@@ -679,6 +766,13 @@ ALTER TABLE `role_has_permissions`
   ADD KEY `role_has_permissions_role_id_foreign` (`role_id`);
 
 --
+-- Indexes for table `services`
+--
+ALTER TABLE `services`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `services_title_unique` (`title`);
+
+--
 -- Indexes for table `sessions`
 --
 ALTER TABLE `sessions`
@@ -691,6 +785,13 @@ ALTER TABLE `sessions`
 --
 ALTER TABLE `sliders`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `specialists`
+--
+ALTER TABLE `specialists`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `specialists_service_id_foreign` (`service_id`);
 
 --
 -- Indexes for table `sub_categories`
@@ -721,13 +822,19 @@ ALTER TABLE `branches`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `contacts`
 --
 ALTER TABLE `contacts`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `events`
+--
+ALTER TABLE `events`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -742,16 +849,22 @@ ALTER TABLE `jobs`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `labors`
+--
+ALTER TABLE `labors`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `otps`
 --
 ALTER TABLE `otps`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `pages`
@@ -763,19 +876,19 @@ ALTER TABLE `pages`
 -- AUTO_INCREMENT for table `permissions`
 --
 ALTER TABLE `permissions`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `product_images`
 --
 ALTER TABLE `product_images`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `roles`
@@ -784,26 +897,50 @@ ALTER TABLE `roles`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `services`
+--
+ALTER TABLE `services`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT for table `sliders`
 --
 ALTER TABLE `sliders`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `specialists`
+--
+ALTER TABLE `specialists`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `sub_categories`
 --
 ALTER TABLE `sub_categories`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Constraints for table `events`
+--
+ALTER TABLE `events`
+  ADD CONSTRAINT `events_service_id_foreign` FOREIGN KEY (`service_id`) REFERENCES `services` (`id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `labors`
+--
+ALTER TABLE `labors`
+  ADD CONSTRAINT `labors_service_id_foreign` FOREIGN KEY (`service_id`) REFERENCES `services` (`id`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `model_has_permissions`
@@ -816,6 +953,13 @@ ALTER TABLE `model_has_permissions`
 --
 ALTER TABLE `model_has_roles`
   ADD CONSTRAINT `model_has_roles_role_id_foreign` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `pages`
+--
+ALTER TABLE `pages`
+  ADD CONSTRAINT `pages_category_id_foreign` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `pages_sub_category_id_foreign` FOREIGN KEY (`sub_category_id`) REFERENCES `sub_categories` (`id`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `products`
@@ -837,6 +981,12 @@ ALTER TABLE `product_images`
 ALTER TABLE `role_has_permissions`
   ADD CONSTRAINT `role_has_permissions_permission_id_foreign` FOREIGN KEY (`permission_id`) REFERENCES `permissions` (`id`) ON DELETE CASCADE,
   ADD CONSTRAINT `role_has_permissions_role_id_foreign` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `specialists`
+--
+ALTER TABLE `specialists`
+  ADD CONSTRAINT `specialists_service_id_foreign` FOREIGN KEY (`service_id`) REFERENCES `services` (`id`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `sub_categories`
