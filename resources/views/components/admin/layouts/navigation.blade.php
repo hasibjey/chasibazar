@@ -162,12 +162,12 @@
                         </li>
                     @endif
                     <!-- Order route -->
-                    @if (Auth::guard('admin')->user()->can('contacts view'))
+                    @if (Auth::guard('admin')->user()->can('order view'))
                         <li
-                            class="nav-item {{ Str::startsWith(Route::currentRouteName(), 'admin.contact.') ? 'menu-open' : '' }}">
+                            class="nav-item {{ Str::startsWith(Route::currentRouteName(), 'admin.orders.') ? 'menu-open' : '' }}">
                             <a href="#"
-                                class="nav-link {{ Str::startsWith(Route::currentRouteName(), 'admin.contact.') ? 'active' : '' }}">
-                                <i class="nav-icon fa fa-address-book"></i>
+                                class="nav-link {{ Str::startsWith(Route::currentRouteName(), 'admin.orders.') ? 'active' : '' }}">
+                                <i class="nav-icon fa fa-cart-arrow-down"></i>
                                 <p>
                                     Order management
                                     <i class="right fas fa-angle-left"></i>
@@ -177,7 +177,7 @@
                                 @if (Auth::guard('admin')->user()->can('branch view'))
                                     <li class="nav-item">
                                         <a href="{{ route('admin.orders.pending') }}"
-                                            class="nav-link {{ Route::current()->getName() == 'admin.contact.branch.index' ? 'active' : '' }}">
+                                            class="nav-link {{ Route::current()->getName() == 'admin.orders.pending' ? 'active' : '' }}">
                                             <i class="far fa-circle nav-icon"></i>
                                             <p>Pending</p>
                                         </a>
@@ -289,7 +289,7 @@
                                     </a>
                                 </li>
                             @endif
-                            @if (Auth::guard('admin')->user()->can('index view'))
+                            @if (Auth::guard('admin')->user()->can('shipping view'))
                                 <li class="nav-item">
                                     <a href="{{ route('admin.setting.shipping.index') }}"
                                         class="nav-link {{ Route::current()->getName() == 'admin.setting.index.create' ? 'active' : '' }}">
