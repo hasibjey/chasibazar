@@ -2,10 +2,17 @@
 
 namespace App\Http\Controllers\Frontend;
 
+use App\Helpers\Backend;
 use App\Helpers\Cart;
 use App\Http\Controllers\Controller;
+use App\Models\Address;
+use App\Models\Order;
+use App\Models\OrderProduct;
 use App\Models\Product;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class CartController extends Controller
 {
@@ -15,6 +22,7 @@ class CartController extends Controller
         $data['customer_id'] = $request->customer_id;
         $data['pid'] = $request->product_id;
         $data['title'] = $request->product_title;
+        $data['maxQuantity'] = $request->maxQuantity;
         $data['quantity'] = $request->product_quantity;
         $data['unit'] = $request->product_unit;
         $data['price'] = $request->product_price;
@@ -70,5 +78,92 @@ class CartController extends Controller
     public function cart()
     {
         return view('customer.page.cart');
+    }
+
+    public function update(Request $request)
+    {
+        $items = Cart::Items();
+        foreach ($items as $key => &$item) {
+            if($item['pid'] === $request->id)
+            {
+                $oldPrice = $item['price'];
+                $oldItemTotal = $item['total'];
+                $quantity = $request->quantity;
+                $item["maxQuantity"] = ($item["maxQuantity"] + $item["quantity"]) - $quantity;
+                $item["quantity"] = $quantity;
+                $newItemTotal = $item['price'] * $quantity;
+                $item['total'] = $newItemTotal;
+
+                $product = Product::find($request->id);
+                $product->update([
+                    'quantity' => $item["maxQuantity"]
+                ]);
+
+                $subTotal = (session()->get('cart.subTotal') - $oldItemTotal) + $newItemTotal;
+                break;
+            }
+        }
+
+        session()->forget('cart.items');
+        session()->put('cart.items', $items);
+        session()->put('cart.subTotal', $subTotal);
+
+        $response = [
+            'items' => Cart::Items(),
+            'subTotal' => Cart::SubTotal(),
+            'other' => $items
+        ];
+
+        return response()->json($response);
+    }
+
+    public function checkout()
+    {
+        $divisions = DB::table('divisions')->get();
+        $address = Address::where('user_id', Auth::guard('customer')->user()->id)->with(['Division', 'District'])->first();
+        if(!empty($address))
+            session()->put('cart.address.address_id', $address->id);
+
+        return view('customer.page.checkout', compact('divisions', 'address'));
+    }
+
+    public function districts(Request $request)
+    {
+        $districts = DB::table('districts')->where('division_id', $request->division)->get();
+        return response()->json($districts);
+    }
+
+    public function order()
+    {
+        $items = Cart::Items();
+        $address = Cart::Address()['address_id'];
+
+        $invoice = Order::latest()->first()->invoice ?? 1;
+
+        $order = Order::insertGetId([
+            'invoice' => $invoice + 1,
+            'address_id' => $address,
+            'discount' => 0,
+            'shipping_cost' => 0,
+            'grant_total' => Cart::SubTotal(),
+            'created_at' => Carbon::now(),
+        ]);
+
+        foreach ($items as $key => $item) {
+            OrderProduct::insert([
+                'order_id' => $order,
+                'product_id' => $item['pid'],
+                'quantity' => $item['quantity'],
+                'rate' => $item['price'],
+                'line_total' => $item['total'],
+                'created_at' => Carbon::now(),
+            ]);
+        }
+
+
+        flash()->success('Your order successfully..');
+        return redirect()->route('home');
+
+
     }
 }

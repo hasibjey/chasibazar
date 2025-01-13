@@ -37,4 +37,12 @@ class Cart
 
         return 0;
     }
+
+    public static function Address()
+    {
+        if (session()->has('cart'))
+            return session()->get('cart.address');
+
+        return 0;
+    }
 }

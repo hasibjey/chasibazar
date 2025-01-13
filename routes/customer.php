@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AddressController;
 use App\Http\Controllers\Customer\Auth\AuthenticationController;
 use App\Http\Controllers\Customer\Auth\RegisterController;
 use App\Http\Controllers\Customer\Page\DashboardController;
@@ -12,6 +13,16 @@ Route::middleware('customer')->prefix('customer')->name('customer.')->group(func
     Route::controller(CartController::class)->group(function() {
         Route::get('/cart', 'cart')->name('cart');
         Route::post('/addToCart', 'addToCart')->name('add.to.cart');
+        Route::post('/cart/update', 'update')->name('cart.update');
+
+        Route::get('/checkout', 'checkout')->name('checkout');
+        Route::post('/address/districts', 'districts')->name('districts');
+
+        Route::get('/order', 'order')->name('order');
+    });
+
+    Route::controller(AddressController::class)->group(function() {
+        Route::post('/address', 'store')->name('address');
     });
 
 

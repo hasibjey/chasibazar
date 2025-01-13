@@ -21,7 +21,6 @@ return new class extends Migration
             $table->foreignId('sub_category_id')->constrained('sub_categories')->onDelete('cascade');
             $table->text('description')->nullable();
             $table->float('quantity', 2, 11);
-            $table->string('unit');
             $table->float('price', 2, 11);
             $table->string('thumbnail')->nullable();
             $table->boolean('status')->default(1);

@@ -36,7 +36,7 @@
 
             <ul class="px-3 mt-6 bg-primary">
                 <li class="flex flex-row justify-between font-semibold py-2 text-white">
-                    <p>উপ মোট</p>
+                    <p>Sub Total</p>
                     <p><span class="sub-total">{{ Cart::SubTotal() }}</span> TK</p>
                 </li>
             </ul>
@@ -44,7 +44,7 @@
             <div class="flex flex-row px-3 justify-between gap-4 mt-6">
                 <a href="{{ route('customer.cart') }}"
                     class="bg-primary-1 w-full text-center py-1 rounded-sm text-white transition-all duration-300 hover:bg-primary">Cart</a>
-                <a href=""
+                <a href="{{ route('customer.checkout') }}"
                     class="bg-primary-1 w-full text-center py-1 rounded-sm text-white capitalize transition-all duration-300 hover:bg-primary">checkout</a>
             </div>
 

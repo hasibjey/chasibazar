@@ -161,6 +161,31 @@
                             </ul>
                         </li>
                     @endif
+                    <!-- Order route -->
+                    @if (Auth::guard('admin')->user()->can('contacts view'))
+                        <li
+                            class="nav-item {{ Str::startsWith(Route::currentRouteName(), 'admin.contact.') ? 'menu-open' : '' }}">
+                            <a href="#"
+                                class="nav-link {{ Str::startsWith(Route::currentRouteName(), 'admin.contact.') ? 'active' : '' }}">
+                                <i class="nav-icon fa fa-address-book"></i>
+                                <p>
+                                    Order management
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                @if (Auth::guard('admin')->user()->can('branch view'))
+                                    <li class="nav-item">
+                                        <a href="{{ route('admin.orders.pending') }}"
+                                            class="nav-link {{ Route::current()->getName() == 'admin.contact.branch.index' ? 'active' : '' }}">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Pending</p>
+                                        </a>
+                                    </li>
+                                @endif
+                            </ul>
+                        </li>
+                    @endif
                     <!-- Contact route -->
                     @if (Auth::guard('admin')->user()->can('contacts view'))
                         <li
@@ -264,7 +289,15 @@
                                     </a>
                                 </li>
                             @endif
-
+                            @if (Auth::guard('admin')->user()->can('index view'))
+                                <li class="nav-item">
+                                    <a href="{{ route('admin.setting.shipping.index') }}"
+                                        class="nav-link {{ Route::current()->getName() == 'admin.setting.index.create' ? 'active' : '' }}">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Shipping cost</p>
+                                    </a>
+                                </li>
+                            @endif
                         </ul>
                     </li>
 

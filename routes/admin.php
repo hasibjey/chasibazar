@@ -11,11 +11,13 @@ use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\EventController;
 use App\Http\Controllers\Admin\LaborController;
+use App\Http\Controllers\Admin\OrderManageController;
 use App\Http\Controllers\Admin\PageController;
 use App\Http\Controllers\Admin\Permission\PermissionController;
 use App\Http\Controllers\Admin\Permission\RoleController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\ServiceController;
+use App\Http\Controllers\Admin\ShippingCostController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\SpecialistController;
 use App\Http\Controllers\Admin\SubCategoryController;
@@ -71,6 +73,14 @@ Route::middleware(['admin'])->prefix('admin')->name('admin.')->group(function() 
         Route::get('/index/create', 'indexCreate')->name('index.create');
         Route::post('/index/update', 'indexUpdate')->name('index.update');
     });
+
+    Route::controller(ShippingCostController::class)->prefix('shipping')->name('setting.')->group(function () {
+        Route::get('/', 'index')->name('shipping.index');
+        Route::post('/store', 'store')->name('shipping.store');
+        Route::post('/update', 'update')->name('shipping.update');
+        Route::get('/trash/{id}', 'trash')->name('shipping.trash');
+    });
+
     Route::controller(ContactController::class)->prefix('contacts')->name('contact.')->group(function() {
         Route::get('/', 'index')->name('index');
         Route::post('/update', 'update')->name('update');
@@ -146,6 +156,12 @@ Route::middleware(['admin'])->prefix('admin')->name('admin.')->group(function() 
         Route::post('/update', 'update')->name('update');
         Route::get('/trash/{id}', 'trash')->name('trash');
     });
+
+    Route::controller(OrderManageController::class)->prefix('orders')->name('orders.')->group(function() {
+        Route::get('/pending', 'pending')->name('pending');
+    });
+
+
 
 
 });

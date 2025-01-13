@@ -61,7 +61,6 @@
                             @else
                                 <div class="mt-4 flex flex-row gap-10">
                                     <div class="flex flex-row gap-3 items-center justify-center">
-                                        <label class="font-bold">পণ্যের পরিমাণ</label>
                                         <div class="flex flex-row border items-center h-full">
                                         <button class="border-r h-full flex items-center px-1" onclick="decrease(event)">
                                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -90,7 +89,7 @@
                                         '{{ $product->title }}',
                                         '{{ $product->unit }}',
                                         {{ $product->price }},
-                                        )">কার্টে যোগ করুন</button>
+                                        )">Add To Cart</button>
                                 </div>
                             @endif
                             @endauth
@@ -176,7 +175,7 @@
                 const currentQuantity = maxQuantity - quantity;
                 document.querySelector('.quantity').value = currentQuantity;
 
-                addToCart(user_id, customer_id, product_id, product_title, quantity, product_unit, product_price);
+                addToCart(user_id, customer_id, product_id, product_title, maxQuantity, quantity, product_unit, product_price);
 
             }
         </script>
