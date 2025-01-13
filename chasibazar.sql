@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 13, 2025 at 04:59 PM
+-- Generation Time: Jan 13, 2025 at 05:38 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.1.17
 
@@ -129,6 +129,115 @@ CREATE TABLE `contacts` (
 
 INSERT INTO `contacts` (`id`, `email`, `phone`, `whatsapp`, `calling_hours`, `created_at`, `updated_at`) VALUES
 (1, 'info@cashirbazar.com', NULL, NULL, NULL, '2025-01-12 07:55:07', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `districts`
+--
+
+CREATE TABLE `districts` (
+  `id` bigint(11) UNSIGNED NOT NULL,
+  `division_id` int(10) UNSIGNED DEFAULT NULL,
+  `name` varchar(191) NOT NULL,
+  `name_bn` varchar(191) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `districts`
+--
+
+INSERT INTO `districts` (`id`, `division_id`, `name`, `name_bn`) VALUES
+(1, 3, 'Dhaka', 'ঢাকা'),
+(2, 3, 'Faridpur', 'ফরিদপুর'),
+(3, 3, 'Gazipur', 'গাজীপুর'),
+(4, 3, 'Gopalganj', 'গোপালগঞ্জ'),
+(5, 8, 'Jamalpur', 'জামালপুর'),
+(6, 3, 'Kishoreganj', 'কিশোরগঞ্জ'),
+(7, 3, 'Madaripur', 'মাদারীপুর'),
+(8, 3, 'Manikganj', 'মানিকগঞ্জ'),
+(9, 3, 'Munshiganj', 'মুন্সিগঞ্জ'),
+(10, 8, 'Mymensingh', 'ময়মনসিংহ'),
+(11, 3, 'Narayanganj', 'নারায়াণগঞ্জ'),
+(12, 3, 'Narsingdi', 'নরসিংদী'),
+(13, 8, 'Netrokona', 'নেত্রকোণা'),
+(14, 3, 'Rajbari', 'রাজবাড়ি'),
+(15, 3, 'Shariatpur', 'শরীয়তপুর'),
+(16, 8, 'Sherpur', 'শেরপুর'),
+(17, 3, 'Tangail', 'টাঙ্গাইল'),
+(18, 5, 'Bogura', 'বগুড়া'),
+(19, 5, 'Joypurhat', 'জয়পুরহাট'),
+(20, 5, 'Naogaon', 'নওগাঁ'),
+(21, 5, 'Natore', 'নাটোর'),
+(22, 5, 'Nawabganj', 'নবাবগঞ্জ'),
+(23, 5, 'Pabna', 'পাবনা'),
+(24, 5, 'Rajshahi', 'রাজশাহী'),
+(25, 5, 'Sirajgonj', 'সিরাজগঞ্জ'),
+(26, 6, 'Dinajpur', 'দিনাজপুর'),
+(27, 6, 'Gaibandha', 'গাইবান্ধা'),
+(28, 6, 'Kurigram', 'কুড়িগ্রাম'),
+(29, 6, 'Lalmonirhat', 'লালমনিরহাট'),
+(30, 6, 'Nilphamari', 'নীলফামারী'),
+(31, 6, 'Panchagarh', 'পঞ্চগড়'),
+(32, 6, 'Rangpur', 'রংপুর'),
+(33, 6, 'Thakurgaon', 'ঠাকুরগাঁও'),
+(34, 1, 'Barguna', 'বরগুনা'),
+(35, 1, 'Barishal', 'বরিশাল'),
+(36, 1, 'Bhola', 'ভোলা'),
+(37, 1, 'Jhalokati', 'ঝালকাঠি'),
+(38, 1, 'Patuakhali', 'পটুয়াখালী'),
+(39, 1, 'Pirojpur', 'পিরোজপুর'),
+(40, 2, 'Bandarban', 'বান্দরবান'),
+(41, 2, 'Brahmanbaria', 'ব্রাহ্মণবাড়িয়া'),
+(42, 2, 'Chandpur', 'চাঁদপুর'),
+(43, 2, 'Chattogram', 'চট্টগ্রাম'),
+(44, 2, 'Cumilla', 'কুমিল্লা'),
+(45, 2, 'Cox\'s Bazar', 'কক্স বাজার'),
+(46, 2, 'Feni', 'ফেনী'),
+(47, 2, 'Khagrachari', 'খাগড়াছড়ি'),
+(48, 2, 'Lakshmipur', 'লক্ষ্মীপুর'),
+(49, 2, 'Noakhali', 'নোয়াখালী'),
+(50, 2, 'Rangamati', 'রাঙ্গামাটি'),
+(51, 7, 'Habiganj', 'হবিগঞ্জ'),
+(52, 7, 'Maulvibazar', 'মৌলভীবাজার'),
+(53, 7, 'Sunamganj', 'সুনামগঞ্জ'),
+(54, 7, 'Sylhet', 'সিলেট'),
+(55, 4, 'Bagerhat', 'বাগেরহাট'),
+(56, 4, 'Chuadanga', 'চুয়াডাঙ্গা'),
+(57, 4, 'Jashore', 'যশোর'),
+(58, 4, 'Jhenaidah', 'ঝিনাইদহ'),
+(59, 4, 'Khulna', 'খুলনা'),
+(60, 4, 'Kushtia', 'কুষ্টিয়া'),
+(61, 4, 'Magura', 'মাগুরা'),
+(62, 4, 'Meherpur', 'মেহেরপুর'),
+(63, 4, 'Narail', 'নড়াইল'),
+(64, 4, 'Satkhira', 'সাতক্ষীরা');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `divisions`
+--
+
+CREATE TABLE `divisions` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `name` varchar(191) NOT NULL,
+  `name_bn` varchar(191) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `divisions`
+--
+
+INSERT INTO `divisions` (`id`, `name`, `name_bn`) VALUES
+(1, 'Barishal', 'বরিশাল'),
+(2, 'Chattogram', 'চট্টগ্রাম'),
+(3, 'Dhaka', 'ঢাকা'),
+(4, 'Khulna', 'খুলনা'),
+(5, 'Rajshahi', 'রাজশাহী'),
+(6, 'Rangpur', 'রংপুর'),
+(7, 'Sylhet', 'সিলেট'),
+(8, 'Mymensingh', 'ময়মনসিংহ');
 
 -- --------------------------------------------------------
 
@@ -629,7 +738,8 @@ CREATE TABLE `sessions` (
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
 ('D7J20DgtPzEp1TZ2rZjDZkqEfI40UrJArfYKaJ2G', NULL, '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiRTR4c0xKOHQwUEtNamNzeVgzUzZRZnpvRHhhaHFEU0ZucVdMajRpeSI7czoxODoiZmxhc2hlcjo6ZW52ZWxvcGVzIjthOjA6e31zOjk6Il9wcmV2aW91cyI7YToxOntzOjM6InVybCI7czoyMToiaHR0cDovL2xvY2FsaG9zdDo4MDAwIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1736781739),
-('tbmYZC8zeNu3n1BXjnQU8yph4yNd78yPnEJulOyu', NULL, '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiaWw3SWk4M25EdU5kQ0hEZkFNanFqZlFpOG96NnBFdU1YMTNjMXN1RyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzY6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hZG1pbi9zaGlwcGluZyI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6MTg6ImZsYXNoZXI6OmVudmVsb3BlcyI7YTowOnt9czo1MjoibG9naW5fYWRtaW5fNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToxO30=', 1736781751);
+('tbmYZC8zeNu3n1BXjnQU8yph4yNd78yPnEJulOyu', NULL, '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiaWw3SWk4M25EdU5kQ0hEZkFNanFqZlFpOG96NnBFdU1YMTNjMXN1RyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzY6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hZG1pbi9zaGlwcGluZyI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6MTg6ImZsYXNoZXI6OmVudmVsb3BlcyI7YTowOnt9czo1MjoibG9naW5fYWRtaW5fNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToxO30=', 1736781751),
+('YevBOZIY31ajh2nZUy89PjlVX7IX2xWqINTyMICm', NULL, '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiQ0FtZmJTTXhmMktuZUI5RHVGMlkzMWQxZ3hVT2pTWmRMNUpaWjhTMCI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzM6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hZG1pbi9sb2dpbiI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6MTg6ImZsYXNoZXI6OmVudmVsb3BlcyI7YTowOnt9fQ==', 1736786310);
 
 -- --------------------------------------------------------
 
@@ -764,6 +874,22 @@ ALTER TABLE `categories`
 --
 ALTER TABLE `contacts`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `districts`
+--
+ALTER TABLE `districts`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `division_id` (`division_id`),
+  ADD KEY `id` (`id`),
+  ADD KEY `id_2` (`id`);
+
+--
+-- Indexes for table `divisions`
+--
+ALTER TABLE `divisions`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `name` (`name`);
 
 --
 -- Indexes for table `events`
@@ -966,6 +1092,12 @@ ALTER TABLE `categories`
 --
 ALTER TABLE `contacts`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `districts`
+--
+ALTER TABLE `districts`
+  MODIFY `id` bigint(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
 
 --
 -- AUTO_INCREMENT for table `events`
