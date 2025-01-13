@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 13, 2025 at 04:22 PM
+-- Generation Time: Jan 13, 2025 at 04:59 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.1.17
 
@@ -462,6 +462,7 @@ CREATE TABLE `products` (
   `description` text DEFAULT NULL,
   `quantity` float NOT NULL,
   `price` float NOT NULL,
+  `unit` varchar(191) NOT NULL,
   `thumbnail` varchar(255) DEFAULT NULL,
   `status` tinyint(1) NOT NULL DEFAULT 1,
   `created_at` timestamp NULL DEFAULT NULL,
